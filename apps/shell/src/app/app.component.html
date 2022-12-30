@@ -1,4 +1,7 @@
 <div>
+
+  <!-- HEADER | TODO: Convert to component -->
+
   <mat-toolbar class="mat-elevation-z8">
     <button
       mat-icon-button
@@ -13,8 +16,9 @@
         src="https://ratenow.es/img/logo-ratenow-b-full.svg"
         alt="RateNow logo">
     </div>
-
   </mat-toolbar>
+
+  <!-- BODY | TODO: Convert to component -->
 
   <mat-sidenav-container>
     <mat-sidenav #sidenav class="mat-elevation-z8">
@@ -23,20 +27,20 @@
 
       <mat-divider></mat-divider>
 
-      <button mat-button class="menu-button" routerLink="/clientes">
+      <button mat-button class="menu-button" routerLink="benchmark">
         <mat-icon>person</mat-icon>
         <span>Clientes</span>
       </button>
-      <button mat-button class="menu-button" routerLink="/benchmark">
+      <button mat-button class="menu-button" routerLink="benchmark">
         <!-- <mat-icon>graphic_eq</mat-icon> -->
         <mat-icon>timeline</mat-icon>
         <span>Benchmark</span>
       </button>
-      <button mat-button class="menu-button" routerLink="/benchmark">
+      <button mat-button class="menu-button" routerLink="benchmark">
         <mat-icon>settings</mat-icon>
         <span>Estado del sistema</span>
       </button>
-      <button mat-button class="menu-button" routerLink="/benchmark">
+      <button mat-button class="menu-button" routerLink="benchmark">
         <mat-icon>supervised_user_circle</mat-icon>
         <span>Gestion IT</span>
       </button>
@@ -54,5 +58,14 @@
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
+
+  <!-- FOOTER | TODO: Convert to component must be a toolbar https://material.angular.io/components/toolbar/examples  -->
+
+  <footer>
+    <p>
+      This is application footer
+    </p>
+  </footer>
+
 </div>
 
