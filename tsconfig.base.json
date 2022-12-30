@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
       "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"]
     }
   },
