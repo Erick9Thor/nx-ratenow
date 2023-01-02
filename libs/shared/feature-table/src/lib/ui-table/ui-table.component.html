@@ -1,0 +1,19 @@
+<mat-form-field>
+  <mat-label>Filtra por aqui!</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Pepa de ATC" #input>
+</mat-form-field>
+
+<table mat-table *ngIf="dataSource" [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <ng-container *ngFor="let column of displayedColumns" matColumnDef="{{ column }}">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ column }} </th>
+    <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]"
+               showFirstLastButtons
+               aria-label="Select page of periodic elements">
+</mat-paginator>
