@@ -7,6 +7,7 @@ import { appRoutes } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreMaterialModule } from '@nx-ratenow/core/material';
 import { CoreFeatureToolbarModule } from '@nx-ratenow/core/feature-toolbar';
+import {SharedFeatureTableModule} from "@nx-ratenow/shared/feature-table";
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,6 +15,7 @@ import { CoreFeatureToolbarModule } from '@nx-ratenow/core/feature-toolbar';
     BrowserModule,
     CoreFeatureToolbarModule,
     CoreMaterialModule,
+    SharedFeatureTableModule,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     BrowserAnimationsModule,
   ],

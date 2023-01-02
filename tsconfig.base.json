@@ -19,7 +19,10 @@
         "libs/core/feature-toolbar/src/index.ts"
       ],
       "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
-      "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"]
+      "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"],
+      "@nx-ratenow/shared/feature-table": [
+        "libs/shared/feature-table/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
