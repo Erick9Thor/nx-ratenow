@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-ratenow/core/feature-breadcrumb": [
+        "libs/core/feature-breadcrumb/src/index.ts"
+      ],
       "@nx-ratenow/core/feature-toolbar": [
         "libs/core/feature-toolbar/src/index.ts"
       ],
