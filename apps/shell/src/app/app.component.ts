@@ -37,4 +37,8 @@ export class AppComponent implements AfterViewInit {
         }
       });
   }
+
+  toggleSidenav() {
+    this.sidenav.toggle();
+  }
 }

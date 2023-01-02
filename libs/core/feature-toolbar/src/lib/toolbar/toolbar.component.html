@@ -1,15 +1,15 @@
-<!-- <mat-toolbar class="mat-elevation-z8">
+<mat-toolbar class="mat-elevation-z8">
   <button
     mat-icon-button
-    (click)="sidenav.toggle()"
+    (click)="toggleSidenav()"
   >
-    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
-    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+    <mat-icon *ngIf="!sidenavOpen"> menu </mat-icon>
+    <mat-icon *ngIf="sidenavOpen"> close </mat-icon>
   </button>
 
   <div class="logo-container">
     <img class="logo-img"
-      src="https://ratenow.es/img/logo-ratenow-b-full.svg"
+      [src]="svgIcon"
       alt="RateNow logo">
   </div>
-</mat-toolbar> -->
+</mat-toolbar>
