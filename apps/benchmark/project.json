@@ -12,7 +12,7 @@
         "outputPath": "dist/apps/benchmark",
         "index": "apps/benchmark/src/index.html",
         "main": "apps/benchmark/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": "apps/benchmark/src/polyfills.ts",
         "tsConfig": "apps/benchmark/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
