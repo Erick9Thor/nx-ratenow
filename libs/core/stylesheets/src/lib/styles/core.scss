@@ -1,0 +1,40 @@
+@use '@angular/material' as mat;
+@import "@angular/material/theming";
+
+@include mat.core();
+
+// SCSS Vars
+@import "../variables/var";
+
+// Mixins
+@import "../abstracts/mixins";
+
+// Fonts
+@import "../fonts/inter";
+
+// Styles / CSS Variables
+@import "../styles/style-default";
+@import "../styles/style-dark";
+@import "../styles/style-light";
+
+
+@include mat.all-component-themes($ratenow-theme);
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  height: 100%;
+  overflow: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "salt", "calt", "case";
+  @apply font-sans leading-normal antialiased;
+}
+
+body {
+  height: 100%;
+  letter-spacing: -0.006em;
+  @apply text-sm text-black;
+}
+
+div {
+  box-sizing: border-box;
+}
