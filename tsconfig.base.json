@@ -1,6 +1,9 @@
 {
   "compileOnSave": false,
+  "allowSyntheticDefaultImports": true,
   "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -10,7 +13,7 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2018", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
@@ -22,6 +25,10 @@
       "@nx-ratenow/core/stylesheets": ["libs/core/stylesheets/src/index.ts"],
       "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"]
     }
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   },
   "exclude": ["node_modules", "tmp"]
 }
