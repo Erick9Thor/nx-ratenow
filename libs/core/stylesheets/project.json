@@ -1,0 +1,24 @@
+{
+  "name": "core-stylesheets",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "root": "libs/core/stylesheets",
+  "sourceRoot": "libs/core/stylesheets/src",
+  "prefix": "nx-ratenow",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "tsConfig": "libs/core/stylesheets/tsconfig.lib.json",
+        "project": "libs/core/stylesheets/ng-package.json"
+      },
+      "configurations": {
+        "": {
+          "tsConfig": "libs/core/stylesheets/tsconfig.lib.prod.json"
+        }
+      }
+    }
+  },
+  "tags": []
+}

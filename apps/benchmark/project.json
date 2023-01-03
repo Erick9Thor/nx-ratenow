@@ -2,6 +2,7 @@
   "name": "benchmark",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
+  "root": "apps/benchmark",
   "sourceRoot": "apps/benchmark/src",
   "prefix": "nx-ratenow",
   "targets": {
@@ -12,14 +13,18 @@
         "outputPath": "dist/apps/benchmark",
         "index": "apps/benchmark/src/index.html",
         "main": "apps/benchmark/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": "apps/benchmark/src/polyfills.ts",
         "tsConfig": "apps/benchmark/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/benchmark/src/favicon.ico",
           "apps/benchmark/src/assets"
         ],
-        "styles": ["apps/benchmark/src/styles.scss"],
+        "styles": ["apps/benchmark/src/styles.scss",
+        "libs/core/stylesheets/src/lib/main.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/core/stylesheets/src/lib/styles/"]
+        },
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/benchmark/webpack.config.js"
