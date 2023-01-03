@@ -19,6 +19,7 @@
         "libs/core/feature-toolbar/src/index.ts"
       ],
       "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
+      "@nx-ratenow/core/stylesheets": ["libs/core/stylesheets/src/index.ts"],
       "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"]
     }
   },
