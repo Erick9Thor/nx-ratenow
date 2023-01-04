@@ -24,6 +24,9 @@
       "@nx-ratenow/core/data-access-layaout": [
         "libs/core/data-access-layaout/src/index.ts"
       ],
+      "@nx-ratenow/core/feature-footer": [
+        "libs/core/feature-footer/src/index.ts"
+      ],
       "@nx-ratenow/core/feature-toolbar": [
         "libs/core/feature-toolbar/src/index.ts"
       ],
