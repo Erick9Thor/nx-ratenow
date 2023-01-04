@@ -13,5 +13,5 @@
     "jest.config.ts",
     "src/**/*.test.ts"
   ],
-  "include": ["src/**/*.ts", "../config/src/lib/interfaces/color-variables.ts"]
+  "include": ["src/**/*.ts"]
 }
