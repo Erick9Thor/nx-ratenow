@@ -38,11 +38,13 @@
         <span>Help</span>
       </button>
     </mat-sidenav>
-    <mat-sidenav-content>
-      <div class="content mat-elevation-z8">
-        <router-outlet></router-outlet>
-      </div>
-    </mat-sidenav-content>
+        <mat-sidenav-content>
+          <div class="content mat-elevation-z8">
+            <nx-ratenow-ui-breadcrumb [bgColor]="'#eee'" [fontSize]="'18px'" [fontColor]="'#0275d8'" [lastLinkColor]="'#000'"
+                                      [symbol]="' > '"></nx-ratenow-ui-breadcrumb>
+            <router-outlet></router-outlet>
+          </div>
+        </mat-sidenav-content>
   </mat-sidenav-container>
 
 </div>

@@ -8,5 +8,17 @@ export const appRoutes: Route[] = [
       loadRemoteModule('benchmark', './Module').then(
         (m) => m.RemoteEntryModule
       ),
-  },
+    data: {
+      breadcrumb: [
+        {
+          label: 'Home',
+          url: '/'
+        },
+        {
+          label: 'Benchmark',
+          url: ''
+        }
+      ]
+    }
+  }
 ];
