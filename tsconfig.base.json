@@ -18,12 +18,33 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-ratenow/core/animations": ["libs/core/animations/src/index.ts"],
+      "@nx-ratenow/core/config": ["libs/core/config/src/index.ts"],
+      "@nx-ratenow/core/config-panel": ["libs/core/config-panel/src/index.ts"],
+      "@nx-ratenow/core/data-access-layaout": [
+        "libs/core/data-access-layaout/src/index.ts"
+      ],
       "@nx-ratenow/core/feature-toolbar": [
         "libs/core/feature-toolbar/src/index.ts"
       ],
+      "@nx-ratenow/core/layaout": ["libs/core/layaout/src/index.ts"],
       "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
+      "@nx-ratenow/core/navigation-item": [
+        "libs/core/navigation-item/src/index.ts"
+      ],
+      "@nx-ratenow/core/pipes": ["libs/core/pipes/src/index.ts"],
       "@nx-ratenow/core/stylesheets": ["libs/core/stylesheets/src/index.ts"],
-      "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"]
+      "@nx-ratenow/core/utils": ["libs/core/utils/src/index.ts"],
+      "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"],
+      "@nx-ratenow/shared/feature-popover": [
+        "libs/shared/feature-popover/src/index.ts"
+      ],
+      "@nx-ratenow/shared/feature-scrollbar": [
+        "libs/shared/feature-scrollbar/src/index.ts"
+      ],
+      "@nx-ratenow/shared/feature-sidebar": [
+        "libs/shared/feature-sidebar/src/index.ts"
+      ]
     }
   },
   "angularCompilerOptions": {

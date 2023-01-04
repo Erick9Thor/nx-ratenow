@@ -2,7 +2,6 @@
   "name": "benchmark",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/benchmark",
   "sourceRoot": "apps/benchmark/src",
   "prefix": "nx-ratenow",
   "targets": {

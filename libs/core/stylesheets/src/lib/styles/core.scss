@@ -12,11 +12,10 @@
 // Fonts
 @import "../fonts/inter";
 
-// Styles / CSS Variables
-@import "../styles/style-default";
-@import "../styles/style-dark";
-@import "../styles/style-light";
-
+// Themes
+@import "../themes/style-default";
+@import "../themes/style-dark";
+@import "../themes/style-light";
 
 @include mat.all-component-themes($ratenow-theme);
 

@@ -2,7 +2,6 @@
   "name": "shell",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/shell",
   "sourceRoot": "apps/shell/src",
   "prefix": "nx-ratenow",
   "targets": {

@@ -1,0 +1,26 @@
+{
+  "name": "core-data-access-layaout",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/core/data-access-layaout/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/core/data-access-layaout",
+        "main": "libs/core/data-access-layaout/src/index.ts",
+        "tsConfig": "libs/core/data-access-layaout/tsconfig.lib.json",
+        "assets": ["libs/core/data-access-layaout/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/core/data-access-layaout/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}
