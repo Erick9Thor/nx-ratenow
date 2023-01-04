@@ -27,7 +27,6 @@
       "@nx-ratenow/core/feature-toolbar": [
         "libs/core/feature-toolbar/src/index.ts"
       ],
-      "@nx-ratenow/core/layaout": ["libs/core/layaout/src/index.ts"],
       "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
       "@nx-ratenow/core/pipes": ["libs/core/pipes/src/index.ts"],
       "@nx-ratenow/core/stylesheets": ["libs/core/stylesheets/src/index.ts"],
