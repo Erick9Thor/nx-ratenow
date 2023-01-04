@@ -29,9 +29,6 @@
       ],
       "@nx-ratenow/core/layaout": ["libs/core/layaout/src/index.ts"],
       "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
-      "@nx-ratenow/core/navigation-item": [
-        "libs/core/navigation-item/src/index.ts"
-      ],
       "@nx-ratenow/core/pipes": ["libs/core/pipes/src/index.ts"],
       "@nx-ratenow/core/stylesheets": ["libs/core/stylesheets/src/index.ts"],
       "@nx-ratenow/core/utils": ["libs/core/utils/src/index.ts"],

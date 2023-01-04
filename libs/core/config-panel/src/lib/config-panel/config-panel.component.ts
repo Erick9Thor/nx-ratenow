@@ -3,15 +3,15 @@ import { Component, Inject } from '@angular/core';
 import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 import {
   ColorSchemeName,
+  ColorVariable,
+  colorVariables,
   ConfigService,
-  CSSValue,
   RateNowConfig,
   RateNowConfigName
 } from '@nx-ratenow/core/config';
 import { LayoutService } from '@nx-ratenow/core/data-access-layaout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ColorVariable, colorVariables } from '../interfaces/color-variables';
 
 @Component({
   selector: 'nx-ratenow-config-panel',

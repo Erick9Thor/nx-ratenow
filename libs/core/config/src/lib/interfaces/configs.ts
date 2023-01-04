@@ -1,4 +1,4 @@
-import { colorVariables } from '@nx-ratenow/core/config-panel';
+import { colorVariables } from './color-variables';
 import { ColorSchemeName } from './colorSchemeName';
 import { RateNowConfigName } from './config-name.model';
 import { RateNowConfig } from './ratenow-config.interface';

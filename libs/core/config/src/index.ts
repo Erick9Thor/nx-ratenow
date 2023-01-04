@@ -1,3 +1,4 @@
+export * from './lib/interfaces/color-variables';
 export * from './lib/interfaces/colorSchemeName';
 export * from './lib/interfaces/configs';
 export * from './lib/interfaces/config-name.model';

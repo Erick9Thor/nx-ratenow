@@ -13,10 +13,10 @@ import { ToolbarNotificationsDropdownComponent } from './toolbar/toolbar-notific
 import { ToolbarNotificationsComponent } from './toolbar/toolbar-notifications/toolbar-notifications.component';
 import { ToolbarSearchComponent } from './toolbar/toolbar-search/toolbar-search.component';
 import { ToolbarUserDropdownComponent } from './toolbar/toolbar-user/toolbar-user-dropdown/toolbar-user-dropdown.component';
-import { CoreNavigationItemModule } from '@nx-ratenow/core/navigation-item';
 import { ToolbarUserComponent } from './toolbar/toolbar-user/toolbar-user.component';
 import { UiLayaoutComponent } from './ui-layaout/ui-layaout.component';
 import { CorePipesModule } from '@nx-ratenow/core/pipes';
+import { UiNavigationItemComponent } from './navigation/ui-navigation-item/ui-navigation-item.component';
 
 @NgModule({
   imports: [
@@ -24,10 +24,13 @@ import { CorePipesModule } from '@nx-ratenow/core/pipes';
     RouterModule,
     CoreMaterialModule,
     SharedFeatureScrollbarModule,
-    CoreNavigationItemModule,
     CorePipesModule
   ],
   declarations: [
+    // Navigation
+    UiNavigationItemComponent,
+    NavigationComponent,
+
     // SideNav
     SidenavComponent,
     SidenavItemComponent,
@@ -45,9 +48,6 @@ import { CorePipesModule } from '@nx-ratenow/core/pipes';
 
     // Footer
     FooterComponent,
-
-    // Navigation
-    NavigationComponent,
 
     // QuickPanel
     QuickpanelComponent,

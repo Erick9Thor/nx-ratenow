@@ -25,5 +25,9 @@ export * from './lib/toolbar/toolbar-user/toolbar-user.component';
 export * from './lib/toolbar/toolbar.component';
 export * from './lib/core-layaout.module';
 
+// --- Navigation
+export * from './lib/navigation/navigation.component';
+export * from './lib/navigation/ui-navigation-item/ui-navigation-item.component';
+
 // --- Layaout
 export * from './lib/ui-layaout/ui-layaout.component';
