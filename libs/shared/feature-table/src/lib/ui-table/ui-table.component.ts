@@ -1,7 +1,8 @@
-import {AfterViewInit, Component, Input, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, inject, Input, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatSort} from "@angular/material/sort";
+import {MatSnackBar, MatSnackBarRef} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'nx-ratenow-ui-table',
@@ -14,6 +15,9 @@ export class UiTableComponent implements AfterViewInit {
   _elementData!: object[];
   dataSource!: MatTableDataSource<object>;
   _displayedColumns!: string[];
+  value = "";
+  state = "";
+  durationInSeconds = 5;
 
   get elementData(): object[] {
     return this._elementData;
@@ -40,8 +44,46 @@ export class UiTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
+  constructor(private _snackBar: MatSnackBar) {}
+
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }
+
+  applyFilter() {
+    if (this.value != "" && this.value != undefined) {
+      this.dataSource.filter = this.value.trim().toLowerCase();
+    } else if (this.state != "" && this.state != undefined) {
+      this.dataSource.filter = this.state.trim().toLowerCase();
+    } else {
+      this.openSnackBar();
+      this.dataSource.filter = "";
+    }
+  }
+
+  openSnackBar() {
+    this._snackBar.openFromComponent(PizzaPartyAnnotatedComponent, {
+      duration: this.durationInSeconds * 1000,
+    });
+  }
+
+  reset() {
+    window.location.reload();
+  }
+}
+
+@Component({
+  selector: 'nx-ratenow-snack-filter',
+  templateUrl: 'snack-bar-no-filter.html',
+  styles: [
+    `
+    .example-pizza-party {
+      color: hotpink;
+    }
+  `,
+  ],
+})
+export class PizzaPartyAnnotatedComponent {
+  snackBarRef = inject(MatSnackBarRef);
 }

@@ -4,7 +4,6 @@ import { CoreMaterialModule } from '@nx-ratenow/core/material';
 import { UiTableComponent } from './ui-table/ui-table.component';
 import { MatSortModule } from '@angular/material/sort';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { UiFilterComponent } from './ui-filter/ui-filter.component';
 
 @NgModule({
   imports: [
@@ -14,7 +13,7 @@ import { UiFilterComponent } from './ui-filter/ui-filter.component';
     ReactiveFormsModule,
     FormsModule,
   ],
-  declarations: [UiTableComponent, UiFilterComponent],
+  declarations: [UiTableComponent],
   exports: [UiTableComponent],
 })
 export class SharedFeatureTableModule {}
