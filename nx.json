@@ -4,6 +4,17 @@
   "affected": {
     "defaultBase": "master"
   },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tslint.json": "*",
+    "nx.json": "*",
+    "tsconfig.base.json": "*",
+    ".eslintrc.json": "*",
+    "libs/core/stylesheets/**/*.scss": "*"
+  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
@@ -57,6 +68,9 @@
     ],
     "sharedGlobals": []
   },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
   "generators": {
     "@nrwl/angular:application": {
       "style": "scss",
@@ -71,5 +85,6 @@
     "@nrwl/angular:component": {
       "style": "scss"
     }
-  }
+  },
+  "defaultProject": "shell"
 }

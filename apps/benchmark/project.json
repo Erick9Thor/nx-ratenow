@@ -20,8 +20,10 @@
           "apps/benchmark/src/favicon.ico",
           "apps/benchmark/src/assets"
         ],
-        "styles": ["apps/benchmark/src/styles.scss",
-        "libs/core/stylesheets/src/lib/main.scss"],
+        "styles": [
+          "libs/core/stylesheets/src/lib/main.scss",
+          "apps/benchmark/src/styles.scss"
+        ],
         "stylePreprocessorOptions": {
           "includePaths": ["libs/core/stylesheets/src/lib/styles/"]
         },
