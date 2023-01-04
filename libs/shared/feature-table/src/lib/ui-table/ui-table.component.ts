@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, inject, Input, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
+import {MatTable, MatTableDataSource} from '@angular/material/table';
 import {MatSort} from "@angular/material/sort";
 import {MatSnackBar, MatSnackBarRef} from "@angular/material/snack-bar";
 
@@ -16,7 +16,6 @@ export class UiTableComponent implements AfterViewInit {
   dataSource!: MatTableDataSource<object>;
   _displayedColumns!: string[];
   value = "";
-  state = "";
   durationInSeconds = 5;
 
   get elementData(): object[] {
@@ -43,6 +42,7 @@ export class UiTableComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatTable) table!: MatTable<object>;
 
   constructor(private _snackBar: MatSnackBar) {}
 
@@ -54,8 +54,6 @@ export class UiTableComponent implements AfterViewInit {
   applyFilter() {
     if (this.value != "" && this.value != undefined) {
       this.dataSource.filter = this.value.trim().toLowerCase();
-    } else if (this.state != "" && this.state != undefined) {
-      this.dataSource.filter = this.state.trim().toLowerCase();
     } else {
       this.openSnackBar();
       this.dataSource.filter = "";
@@ -70,6 +68,14 @@ export class UiTableComponent implements AfterViewInit {
 
   reset() {
     window.location.reload();
+  }
+
+  addData() {
+    const randomElementIndex = Math.floor(Math.random() * this.elementData.length);
+    const data = this.dataSource.data;
+    data.push(this.elementData[randomElementIndex]);
+    this.dataSource.data = data;
+    this.table.renderRows();
   }
 }
 

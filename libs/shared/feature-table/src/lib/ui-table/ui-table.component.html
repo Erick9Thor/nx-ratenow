@@ -1,28 +1,14 @@
-<!--<mat-card>-->
-<!--  <mat-card-header>-->
-<!--    <h2>Customers</h2>-->
-<!--  </mat-card-header>-->
-<!--  <mat-card-actions align="end">-->
-<!--    -->
-<!--    <mat-form-field>-->
-<!--      <button mat-icon-button type="button"><mat-icon>filter_list</mat-icon></button>-->
-<!--    </mat-form-field>-->
-<!--    <mat-form-field>-->
-<!--      <button mat-icon-button color="primary" type="button"><mat-icon>add</mat-icon></button>-->
-<!--    </mat-form-field>-->
-<!--  </mat-card-actions>-->
-<!--</mat-card>-->
-
 <mat-card>
-    <mat-card-header>
-      <h2>Customers</h2>
-    </mat-card-header>
   <mat-card-actions>
-    <mat-form-field>
-      <input matInput placeholder="Search" [(ngModel)]= "value">
-      <button matSuffix mat-button><mat-icon>search</mat-icon></button>
+    <h2 class="filter-space">Customers</h2>
+    <mat-form-field class="filter-space">
+      <input matInput placeholder="Search" (keyup.enter)="applyFilter()" [(ngModel)]= "value">
+      <button matSuffix mat-icon-button (click)="applyFilter()"><mat-icon>search</mat-icon></button>
     </mat-form-field>
+    <button class="filter-space" mat-mini-fab type="button" (click)="reset()"><mat-icon>restart_alt</mat-icon></button>
+    <button class="filter-space" matSuffix mat-fab color="primary" type="button" (click)="addData()"><mat-icon>add</mat-icon></button>
   </mat-card-actions>
+  <mat-card-footer><mat-progress-bar mode="query" color="warn"></mat-progress-bar></mat-card-footer>
 </mat-card>
 
 
