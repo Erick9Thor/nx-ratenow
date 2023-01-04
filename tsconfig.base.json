@@ -27,6 +27,9 @@
       "@nx-ratenow/core/feature-footer": [
         "libs/core/feature-footer/src/index.ts"
       ],
+      "@nx-ratenow/core/feature-navigation": [
+        "libs/core/feature-navigation/src/index.ts"
+      ],
       "@nx-ratenow/core/feature-toolbar": [
         "libs/core/feature-toolbar/src/index.ts"
       ],
