@@ -4,6 +4,11 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 import { Breadcrumb } from '../model/breadcrumb.model';
 import { Ng7MatBreadcrumbService } from '../service/ng7-mat-breadcrumb.service';
 
+/**
+ * Este componente esta sacado de: https://www.npmjs.com/package/ng7-mat-breadcrumb
+ *
+ * Y se ha modificado para adaptarlo a nuestras necesidades
+ */
 
 @Component({
   selector: 'nx-ratenow-ui-breadcrumb',
