@@ -45,7 +45,10 @@ import {MatTreeModule} from "@angular/material/tree";
 import {OverlayModule} from "@angular/cdk/overlay";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {DialogModule} from "@angular/cdk/dialog";
+import {MatFormFieldControl} from "@angular/material/form-field";
 
+// @ts-ignore
+// @ts-ignore
 @NgModule({
   exports: [
     A11yModule,

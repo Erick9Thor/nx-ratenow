@@ -3,10 +3,7 @@
 <!--    <h2>Customers</h2>-->
 <!--  </mat-card-header>-->
 <!--  <mat-card-actions align="end">-->
-<!--    <mat-form-field>-->
-<!--      <input type="tel" matInput placeholder="Search" [(ngModel)]= "value">-->
-<!--      <button matSuffix mat-button><mat-icon>search</mat-icon></button>-->
-<!--    </mat-form-field>-->
+<!--    -->
 <!--    <mat-form-field>-->
 <!--      <button mat-icon-button type="button"><mat-icon>filter_list</mat-icon></button>-->
 <!--    </mat-form-field>-->
@@ -15,6 +12,19 @@
 <!--    </mat-form-field>-->
 <!--  </mat-card-actions>-->
 <!--</mat-card>-->
+
+<mat-card>
+    <mat-card-header>
+      <h2>Customers</h2>
+    </mat-card-header>
+  <mat-card-actions>
+    <mat-form-field>
+      <input matInput placeholder="Search" [(ngModel)]= "value">
+      <button matSuffix mat-button><mat-icon>search</mat-icon></button>
+    </mat-form-field>
+  </mat-card-actions>
+</mat-card>
+
 
 <table mat-table *ngIf="dataSource" [dataSource]="dataSource" matSort class="mat-elevation-z8">
   <ng-container *ngFor="let column of displayedColumns" matColumnDef="{{ column }}">
