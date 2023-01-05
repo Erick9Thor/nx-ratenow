@@ -27,17 +27,17 @@
   // Typography
   --font: theme('fontFamily.sans');
   --font-weight-medium: 500;
-  --font-caption: #{mat.font-weight($config, caption) #{mat.font-size($config, caption)}/#{mat.line-height($config, caption)} mat.font-family($config, caption)};
-  --font-body-1: #{mat.font-weight($config, body-1) #{mat.font-size($config, body-1)}/#{mat.line-height($config, body-1)} mat.font-family($config, body-1)};
-  --font-body-2: #{mat.font-weight($config, body-2) #{mat.font-size($config, body-2)}/#{mat.line-height($config, body-2)} mat.font-family($config, body-2)};
-  --font-subtitle-2: #{mat.font-weight($config, subtitle-2) #{mat.font-size($config, subtitle-2)}/#{mat.line-height($config, subtitle-2)} mat.font-family($config, subtitle-2)};
-  --font-subtitle-1: #{mat.font-weight($config, subtitle-1) #{mat.font-size($config, subtitle-1)}/#{mat.line-height($config, subtitle-1)} mat.font-family($config, subtitle-1)};
-  --font-headline-5: #{mat.font-weight($config, headline-5) #{mat.font-size($config, headline-5)}/#{mat.line-height($config, headline-5)} mat.font-family($config, headline-5)};
-  --font-headline-6: #{mat.font-weight($config, headline-6) #{mat.font-size($config, headline-6)}/#{mat.line-height($config, headline-6)} mat.font-family($config, headline-6)};
-  --font-headline-4: #{mat.font-weight($config, headline-4) #{mat.font-size($config, headline-4)}/#{mat.line-height($config, headline-4)} mat.font-family($config, headline-4)};
-  --font-headline-3: #{mat.font-weight($config, headline-3) #{mat.font-size($config, headline-3)}/#{mat.line-height($config, headline-3)} mat.font-family($config, headline-3)};
-  --font-headline-2: #{mat.font-weight($config, headline-2) #{mat.font-size($config, headline-2)}/#{mat.line-height($config, headline-2)} mat.font-family($config, headline-2)};
-  --font-headline-1: #{mat.font-weight($config, headline-1) #{mat.font-size($config, headline-1)}/#{mat.line-height($config, headline-1)} mat.font-family($config, headline-1)};
+  --font-caption: #{mat.font-weight($rate-now-typography, caption) #{mat.font-size($rate-now-typography, caption)}/#{mat.line-height($rate-now-typography, caption)} mat.font-family($rate-now-typography, caption)};
+  --font-body-1: #{mat.font-weight($rate-now-typography, body-1) #{mat.font-size($rate-now-typography, body-1)}/#{mat.line-height($rate-now-typography, body-1)} mat.font-family($rate-now-typography, body-1)};
+  --font-body-2: #{mat.font-weight($rate-now-typography, body-2) #{mat.font-size($rate-now-typography, body-2)}/#{mat.line-height($rate-now-typography, body-2)} mat.font-family($rate-now-typography, body-2)};
+  --font-subtitle-2: #{mat.font-weight($rate-now-typography, subtitle-2) #{mat.font-size($rate-now-typography, subtitle-2)}/#{mat.line-height($rate-now-typography, subtitle-2)} mat.font-family($rate-now-typography, subtitle-2)};
+  --font-subtitle-1: #{mat.font-weight($rate-now-typography, subtitle-1) #{mat.font-size($rate-now-typography, subtitle-1)}/#{mat.line-height($rate-now-typography, subtitle-1)} mat.font-family($rate-now-typography, subtitle-1)};
+  --font-headline-5: #{mat.font-weight($rate-now-typography, headline-5) #{mat.font-size($rate-now-typography, headline-5)}/#{mat.line-height($rate-now-typography, headline-5)} mat.font-family($rate-now-typography, headline-5)};
+  --font-headline-6: #{mat.font-weight($rate-now-typography, headline-6) #{mat.font-size($rate-now-typography, headline-6)}/#{mat.line-height($rate-now-typography, headline-6)} mat.font-family($rate-now-typography, headline-6)};
+  --font-headline-4: #{mat.font-weight($rate-now-typography, headline-4) #{mat.font-size($rate-now-typography, headline-4)}/#{mat.line-height($rate-now-typography, headline-4)} mat.font-family($rate-now-typography, headline-4)};
+  --font-headline-3: #{mat.font-weight($rate-now-typography, headline-3) #{mat.font-size($rate-now-typography, headline-3)}/#{mat.line-height($rate-now-typography, headline-3)} mat.font-family($rate-now-typography, headline-3)};
+  --font-headline-2: #{mat.font-weight($rate-now-typography, headline-2) #{mat.font-size($rate-now-typography, headline-2)}/#{mat.line-height($rate-now-typography, headline-2)} mat.font-family($rate-now-typography, headline-2)};
+  --font-headline-1: #{mat.font-weight($rate-now-typography, headline-1) #{mat.font-size($rate-now-typography, headline-1)}/#{mat.line-height($rate-now-typography, headline-1)} mat.font-family($rate-now-typography, headline-1)};
 
   // Transitions
   --trans-ease-in-out: all var(--trans-ease-in-out-duration) var(--trans-ease-in-out-timing-function);
@@ -61,14 +61,14 @@
   --text-hint-light: #{$light-disabled-text};
 
   // Foreground
-  --foreground-divider: #{map-get(map-get($ratenow-theme, foreground), divider)};
+  --foreground-divider: #{map-get(map-get($ratenow-theme-light, foreground), divider)};
 
   // // Background
   --background-base: rgb(245, 245, 248);
-  --background-foreground: #{map-get(map-get($ratenow-theme, background), card)};
-  --background-foreground-rgb: #{red(map-get(map-get($ratenow-theme, background), card))}, #{green(map-get(map-get($ratenow-theme, background), card))}, #{blue(map-get(map-get($ratenow-theme, background), card))};
-  --background-app-bar: #{map-get(map-get($ratenow-theme, background), app-bar)};
-  --background-hover: #{map-get(map-get($ratenow-theme, background), hover)};
+  --background-foreground: #{map-get(map-get($ratenow-theme-light, background), card)};
+  --background-foreground-rgb: #{red(map-get(map-get($ratenow-theme-light, background), card))}, #{green(map-get(map-get($ratenow-theme-light, background), card))}, #{blue(map-get(map-get($ratenow-theme-light, background), card))};
+  --background-app-bar: #{map-get(map-get($ratenow-theme-light, background), app-bar)};
+  --background-hover: #{map-get(map-get($ratenow-theme-light, background), hover)};
 
   // // Elevation
   --elevation-default: var(--elevation-z6);
@@ -102,7 +102,7 @@
 
   --sidenav-toolbar-background: #{darken($sidenav-background, 1.5)};
   --sidenav-toolbar-background-rgb: #{red(darken($sidenav-background, 1.5))}, #{green(darken($sidenav-background, 1.5))}, #{blue(darken($sidenav-background, 1.5))};
-  --sidenav-section-divider-color: #{map-get(map-get($ratenow-dark-theme, foreground), divider)};
+  --sidenav-section-divider-color: #{map-get(map-get($ratenow-theme-dark, foreground), divider)};
 
   // // Sidenav Item
   --sidenav-item-min-height: 48px;
@@ -124,7 +124,7 @@
   --sidenav-item-dropdown-color-hover: var(--sidenav-item-color-hover);
   --sidenav-item-dropdown-background-active: var(--sidenav-item-dropdown-background-hover);
   --sidenav-item-dropdown-color-active: var(--sidenav-item-color-active);
-  --sidenav-item-ripple-color: #{rgb(map-get(map-get($ratenow-theme, foreground), base), 0.1)};
+  --sidenav-item-ripple-color: #{rgb(map-get(map-get($ratenow-theme-light, foreground), base), 0.1)};
 
   --sidenav-item-dropdown-gap: 12px;
   --sidenav-subheading-color: #6b6e7f;

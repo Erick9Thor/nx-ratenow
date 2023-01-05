@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '@angular/material' as mat;
 @import "@angular/material/theming";
 
@@ -15,7 +16,7 @@ $color-warn-contrast: 255, 255, 255;
 // Previously "$sidenav-background"
 $sidenav-background: #1a202e !default;
 
-$config: mat.define-typography-config(
+$rate-now-typography: mat.define-typography-config(
   $font-family: var(--font),
   $headline-1: mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
   $headline-2: mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
@@ -75,15 +76,6 @@ $ratenow-theme-background: (
   app-bar: #ebebee
 ) !default;
 
-$ratenow-theme: (
-  primary: $ratenow-primary,
-  accent: $ratenow-accent,
-  warn: $ratenow-warn,
-  is-dark: false,
-  foreground: map_merge(mat.$light-theme-foreground-palette, $ratenow-theme-foreground),
-  background: map_merge(mat.$light-theme-background-palette, $ratenow-theme-background),
-) !default;
-
 $ratenow-dark-theme-background: (
   background: lighten($sidenav-background, 5),
   card: $sidenav-background,
@@ -92,14 +84,57 @@ $ratenow-dark-theme-background: (
   status-bar: darken($sidenav-background, 5)
 ) !default;
 
-$ratenow-dark-theme: (
-  primary: $ratenow-primary,
-  accent: $ratenow-accent,
-  warn: $ratenow-warn,
-  is-dark: true,
-  foreground: mat.$dark-theme-foreground-palette,
-  background: map_merge(mat.$dark-theme-background-palette, $ratenow-dark-theme-background),
-) !default;
+$foreground-light: map_merge(mat.$light-theme-foreground-palette, $ratenow-theme-foreground);
+$background-light: map_merge(mat.$light-theme-background-palette, $ratenow-theme-background);
+
+$foreground-dark: mat.$dark-theme-foreground-palette;
+$background-dark: map_merge(mat.$dark-theme-background-palette, $ratenow-dark-theme-background);
+
+$ratenow-theme-light: mat.define-light-theme((
+  color: (
+    primary: $ratenow-primary,
+    accent: $ratenow-accent,
+    warn: $ratenow-warn,
+  ),
+));
+
+$ratenow-theme-light: map.set(
+  $ratenow-theme-light,
+  color,
+  foreground,
+  $foreground-light
+);
+
+$ratenow-theme-light: map.set(
+  $ratenow-theme-light,
+  color,
+  background-light,
+  $background-light
+);
+
+$ratenow-theme-dark: mat.define-dark-theme((
+  color: (
+    primary: $ratenow-primary,
+    accent: $ratenow-accent,
+    warn: $ratenow-warn,
+  ),
+  typography: $rate-now-typography,
+  density: 0,
+));
+
+$ratenow-theme-dark: map.set(
+  $ratenow-theme-dark,
+  color,
+  foreground,
+  $foreground-dark
+);
+
+$ratenow-theme-dark: map.set(
+  $ratenow-theme-dark,
+  color,
+  background-dark,
+  $background-dark
+);
 
 $light-primary-text: white;
 $light-secondary-text: rgba(white, 0.7);

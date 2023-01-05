@@ -17,7 +17,7 @@
 
 @include mat.core();
 
-@include mat.all-component-themes($ratenow-theme);
+@include mat.all-component-colors($ratenow-theme-light);
 
 // Partials
 @import "../partials/horizontal";

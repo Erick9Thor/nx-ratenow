@@ -3,20 +3,20 @@
 
 
 .ratenow-style-dark {
-  @include mat.all-component-themes($ratenow-dark-theme);
+  @include mat.all-component-colors($ratenow-theme-dark);
 
   // Foreground
-  --background-app-bar: #{map-get(map-get($ratenow-dark-theme, background), app-bar)};
+  --background-app-bar: #{map-get(map-get($ratenow-theme-dark, background), app-bar)};
 
   // Background
   --footer-background: var(--background-foreground);
-  --navigation-background: #{map-get(map-get($ratenow-dark-theme, background), card)};
-  --toolbar-background: #{map-get(map-get($ratenow-dark-theme, background), card)};
-  --background-base: #{map-get(map-get($ratenow-dark-theme, background), background)};
+  --navigation-background: #{map-get(map-get($ratenow-theme-dark, background), card)};
+  --toolbar-background: #{map-get(map-get($ratenow-theme-dark, background), card)};
+  --background-base: #{map-get(map-get($ratenow-theme-dark, background), background)};
 
   // Colors
-  --background-foreground: #{map-get(map-get($ratenow-dark-theme, background), card)};
-  --background-foreground-rgb: #{red(map-get(map-get($ratenow-dark-theme, background), card))}, #{green(map-get(map-get($ratenow-dark-theme, background), card))}, #{blue(map-get(map-get($ratenow-dark-theme, background), card))};
+  --background-foreground: #{map-get(map-get($ratenow-theme-dark, background), card)};
+  --background-foreground-rgb: #{red(map-get(map-get($ratenow-theme-dark, background), card))}, #{green(map-get(map-get($ratenow-theme-dark, background), card))}, #{blue(map-get(map-get($ratenow-theme-dark, background), card))};
   --footer-color: var(--text-color);
   --navigation-color: var(--text-color);
   --text-color: #{$light-primary-text};
@@ -24,12 +24,12 @@
   --text-color-light: #{$dark-primary-text};
 
    // Toolbar
-  --foreground-divider: #{map-get(map-get($ratenow-dark-theme, foreground), divider)};
+  --foreground-divider: #{map-get(map-get($ratenow-theme-dark, foreground), divider)};
   --text-hint: #{$light-disabled-text};
 
   // // Navigation
   --text-hint-light: #{$dark-disabled-text};
-  --background-hover: #{map-get(map-get($ratenow-dark-theme, background), hover)};
+  --background-hover: #{map-get(map-get($ratenow-theme-dark, background), hover)};
 
   // // Secondary Toolbar
   --text-secondary: #{$light-secondary-text};
