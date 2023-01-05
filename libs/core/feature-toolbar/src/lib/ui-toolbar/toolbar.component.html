@@ -42,41 +42,31 @@
     xPosition="after"
     yPosition="below"
   >
-    <button mat-menu-item>
+    <button [matMenuTriggerFor]="addClientMenu" mat-menu-item>
       <mat-icon svgIcon="mat:person_add"></mat-icon>
-      <span>Add Contact</span>
+      <span>Add Client</span>
     </button>
 
     <button mat-menu-item>
-      <mat-icon svgIcon="mat:done_all"></mat-icon>
-      <span>Add Task</span>
-    </button>
-
-    <button mat-menu-item>
-      <mat-icon svgIcon="mat:assignment_turned_in"></mat-icon>
-      <span>Add Project</span>
-    </button>
-
-    <button [matMenuTriggerFor]="documentMenu" mat-menu-item>
-      <mat-icon svgIcon="mat:ballot"></mat-icon>
-      <span>Add Document</span>
+      <mat-icon svgIcon="mat:insights"></mat-icon>
+      <span>Add Benchmark</span>
     </button>
   </mat-menu>
 
-  <mat-menu #documentMenu="matMenu">
+  <mat-menu #addClientMenu="matMenu">
     <button mat-menu-item>
-      <mat-icon svgIcon="mat:description"></mat-icon>
-      <span>Add Quote</span>
+      <mat-icon svgIcon="mat:dvr"></mat-icon>
+      <span>Add Device</span>
     </button>
 
     <button mat-menu-item>
       <mat-icon svgIcon="mat:assignment"></mat-icon>
-      <span>Add Invoice</span>
+      <span>Add Survey</span>
     </button>
 
     <button mat-menu-item>
       <mat-icon svgIcon="mat:receipt"></mat-icon>
-      <span>Add Receipt</span>
+      <span>Add Report</span>
     </button>
   </mat-menu>
 
@@ -151,6 +141,11 @@
       <button mat-menu-item>
         <mat-icon svgIcon="flag:germany"></mat-icon>
         <span>German</span>
+      </button>
+
+      <button mat-menu-item>
+        <mat-icon svgIcon="flag:spain"></mat-icon>
+        <span>Spanish</span>
       </button>
     </mat-menu>
   </div>
