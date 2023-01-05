@@ -15,13 +15,34 @@
         "polyfills": "apps/benchmark/src/polyfills.ts",
         "tsConfig": "apps/benchmark/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
+        "allowedCommonJsDependencies": [
+          "simplebar",
+          "luxon",
+          "dom-set",
+          "dom-plane",
+          "core-js",
+          "can-use-dom",
+          "lodash.debounce",
+          "lodash.memoize",
+          "lodash.throttle"
+        ],
         "assets": [
           "apps/benchmark/src/favicon.ico",
-          "apps/benchmark/src/assets"
+          "apps/benchmark/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/core/assets/src/lib",
+            "output": "assets/img/icons/"
+          },
+          {
+            "glob": "**/*.svg",
+            "input": "node_modules/@material-design-icons/svg",
+            "output": "assets/img/icons/material-design-icons/"
+          }
         ],
         "styles": [
-          "libs/core/stylesheets/src/lib/main.scss",
-          "apps/benchmark/src/styles.scss"
+          "apps/benchmark/src/styles.scss",
+          "libs/core/stylesheets/src/lib/tailwind.scss"
         ],
         "stylePreprocessorOptions": {
           "includePaths": ["libs/core/stylesheets/src/lib/styles/"]

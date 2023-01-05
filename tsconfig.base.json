@@ -19,6 +19,7 @@
     "baseUrl": ".",
     "paths": {
       "@nx-ratenow/core/animations": ["libs/core/animations/src/index.ts"],
+      "@nx-ratenow/core/assets": ["libs/core/assets/src/index.ts"],
       "@nx-ratenow/core/config": ["libs/core/config/src/index.ts"],
       "@nx-ratenow/core/config-panel": ["libs/core/config-panel/src/index.ts"],
       "@nx-ratenow/core/data-access-layaout": [
@@ -27,8 +28,17 @@
       "@nx-ratenow/core/feature-footer": [
         "libs/core/feature-footer/src/index.ts"
       ],
+      "@nx-ratenow/core/feature-layaout": [
+        "libs/core/feature-layaout/src/index.ts"
+      ],
       "@nx-ratenow/core/feature-navigation": [
         "libs/core/feature-navigation/src/index.ts"
+      ],
+      "@nx-ratenow/core/feature-quickpanel": [
+        "libs/core/feature-quickpanel/src/index.ts"
+      ],
+      "@nx-ratenow/core/feature-sidenav": [
+        "libs/core/feature-sidenav/src/index.ts"
       ],
       "@nx-ratenow/core/feature-toolbar": [
         "libs/core/feature-toolbar/src/index.ts"

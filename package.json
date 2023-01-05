@@ -20,6 +20,7 @@
     "@gilsdav/ngx-translate-router": "^5.1.1",
     "@material-design-icons/svg": "^0.14.2",
     "@ngneat/until-destroy": "^9.2.2",
+    "@ngrx/component": "^15.1.0",
     "@ngrx/component-store": "^15.1.0",
     "@ngrx/effects": "^15.1.0",
     "@ngrx/entity": "^15.1.0",

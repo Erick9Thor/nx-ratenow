@@ -25,7 +25,7 @@ const defaultConfig: RateNowConfig = {
   boxed: false,
   sidenav: {
     title: 'RateNow',
-    imageUrl: 'assets/img/demo/logo.svg',
+    imageUrl: 'TODO',
     showCollapsePin: true,
     user: {
       visible: true

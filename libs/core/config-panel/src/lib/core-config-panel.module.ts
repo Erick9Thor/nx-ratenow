@@ -8,6 +8,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatRippleModule } from '@angular/material/core';
 import { MatSliderModule } from '@angular/material/slider';
+import { LetModule } from '@ngrx/component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { MatSliderModule } from '@angular/material/slider';
     MatButtonModule,
     MatIconModule,
 
+    LetModule,
     MatRadioModule,
     MatSlideToggleModule,
     MatRippleModule,

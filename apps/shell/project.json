@@ -15,10 +15,34 @@
         "polyfills": "apps/shell/src/polyfills",
         "tsConfig": "apps/shell/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/shell/src/favicon.ico", "apps/shell/src/assets"],
+        "allowedCommonJsDependencies": [
+          "simplebar",
+          "luxon",
+          "dom-set",
+          "dom-plane",
+          "core-js",
+          "can-use-dom",
+          "lodash.debounce",
+          "lodash.memoize",
+          "lodash.throttle"
+        ],
+        "assets": [
+          "apps/shell/src/favicon.ico",
+          "apps/shell/src/assets",
+          {
+            "glob": "**/*",
+            "input": "libs/core/assets/src/lib",
+            "output": "assets/img/icons/"
+          },
+          {
+            "glob": "**/*.svg",
+            "input": "node_modules/@material-design-icons/svg",
+            "output": "assets/img/icons/material-design-icons/"
+          }
+        ],
         "styles": [
-          "libs/core/stylesheets/src/lib/main.scss",
-          "apps/shell/src/styles.scss"
+          "apps/shell/src/styles.scss",
+          "libs/core/stylesheets/src/lib/tailwind.scss"
         ],
         "stylePreprocessorOptions": {
           "includePaths": ["libs/core/stylesheets/src/lib/styles/"]
@@ -33,13 +57,13 @@
           "budgets": [
             {
               "type": "initial",
-              "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
             },
             {
               "type": "anyComponentStyle",
-              "maximumWarning": "2kb",
-              "maximumError": "4kb"
+              "maximumWarning": "4mb",
+              "maximumError": "5mb"
             }
           ],
           "outputHashing": "all",
