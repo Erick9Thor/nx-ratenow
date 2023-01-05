@@ -14,7 +14,6 @@
         "main": "apps/benchmark/src/main.ts",
         "polyfills": "apps/benchmark/src/polyfills.ts",
         "tsConfig": "apps/benchmark/tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
         "allowedCommonJsDependencies": [
           "simplebar",
           "luxon",

@@ -14,7 +14,6 @@
         "main": "apps/shell/src/main.ts",
         "polyfills": "apps/shell/src/polyfills",
         "tsConfig": "apps/shell/tsconfig.app.json",
-        "inlineStyleLanguage": "scss",
         "allowedCommonJsDependencies": [
           "simplebar",
           "luxon",

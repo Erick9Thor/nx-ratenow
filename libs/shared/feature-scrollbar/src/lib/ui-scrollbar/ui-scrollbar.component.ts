@@ -14,7 +14,7 @@ import SimpleBar from 'simplebar';
   styleUrls: ['./ui-scrollbar.component.scss'],
   // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
-    class: 'ratenow-scrollbar'
+    class: 'nx-ratenow-ui-scrollbar'
   }
 })
 export class UiScrollbarComponent implements AfterContentInit, OnDestroy {
@@ -25,6 +25,7 @@ export class UiScrollbarComponent implements AfterContentInit, OnDestroy {
   constructor(private _element: ElementRef, private zone: NgZone) {}
 
   ngAfterContentInit() {
+    console.log(this.options);
     this.zone.runOutsideAngular(() => {
       this.scrollbarRef = new SimpleBar(
         this._element.nativeElement,
