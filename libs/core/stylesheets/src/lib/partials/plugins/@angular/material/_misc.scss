@@ -68,13 +68,13 @@ textarea.mat-input-element {
   @apply leading-normal;
 }
 
-.vex-flex-form-field {
+.ratenow-flex-form-field {
   .mat-form-field-infix {
     width: 50px;
   }
 }
 
-.vex-dense-form-field {
+.ratenow-dense-form-field {
   margin-bottom: -1.34375em;
 
   &.mat-form-field-appearance-outline {
@@ -84,7 +84,7 @@ textarea.mat-input-element {
   }
 }
 
-.vex-tabs {
+.ratenow-tabs {
   .mat-tab-label.mat-tab-label-active {
     opacity: 1;
   }
@@ -94,7 +94,7 @@ textarea.mat-input-element {
   }
 }
 
-.vex-tabs-dense {
+.ratenow-tabs-dense {
   .mat-tab-label {
     min-width: 0;
   }

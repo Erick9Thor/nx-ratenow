@@ -23,18 +23,18 @@ body.is-blink {
 }
 
 /** SCROLLBLOCK */
-.vex-scrollblock {
+.ratenow-scrollblock {
   position: fixed;
   width: 100%;
 }
 
 /** GLOSSY DIALOG (webkit only) */
-.vex-dialog-glossy .mat-dialog-container {
+.ratenow-dialog-glossy .mat-dialog-container {
   @apply bg-foreground rounded;
 }
 
 .is-blink {
-  .vex-dialog-glossy .mat-dialog-container {
+  .ratenow-dialog-glossy .mat-dialog-container {
     backdrop-filter: saturate(180%) blur(20px);
     @apply bg-foreground/60;
   }
