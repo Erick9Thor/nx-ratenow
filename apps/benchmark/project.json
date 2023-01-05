@@ -32,7 +32,7 @@
           {
             "glob": "**/*",
             "input": "libs/core/assets/src/lib",
-            "output": "assets/img/icons/"
+            "output": "assets"
           },
           {
             "glob": "**/*.svg",
