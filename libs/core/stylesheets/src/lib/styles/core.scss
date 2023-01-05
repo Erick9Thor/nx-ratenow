@@ -1,8 +1,6 @@
 @use '@angular/material' as mat;
 @import "@angular/material/theming";
 
-@include mat.core();
-
 // SCSS Vars
 @import "../variables/var";
 
@@ -17,7 +15,16 @@
 @import "../themes/style-dark";
 @import "../themes/style-light";
 
+@include mat.core();
+
 @include mat.all-component-themes($ratenow-theme);
+
+// Partials
+@import "../partials/horizontal";
+@import "../partials/misc";
+@import "../partials/print";
+@import "../partials/typography";
+@import "../partials/plugins/@angular/material/index";
 
 html {
   box-sizing: border-box;

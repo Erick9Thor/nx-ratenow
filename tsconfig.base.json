@@ -47,7 +47,6 @@
       "@nx-ratenow/core/pipes": ["libs/core/pipes/src/index.ts"],
       "@nx-ratenow/core/stylesheets": ["libs/core/stylesheets/src/index.ts"],
       "@nx-ratenow/core/utils": ["libs/core/utils/src/index.ts"],
-      "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"],
       "@nx-ratenow/shared/feature-popover": [
         "libs/shared/feature-popover/src/index.ts"
       ],
