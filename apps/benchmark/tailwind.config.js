@@ -1,3 +1,6 @@
+const { createGlobPatternsForDependencies } = require('@nrwl/angular/tailwind');
+const { join } = require('path');
+
 const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
 
@@ -10,11 +13,12 @@ function withOpacityValue(variable) {
   };
 }
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.{html,ts}'
+    join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'),
+    ...createGlobPatternsForDependencies(__dirname)
   ],
-  important: ':root',
   theme: {
     screens: {
       sm: '600px',
