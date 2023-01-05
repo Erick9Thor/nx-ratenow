@@ -26,6 +26,15 @@
 @import "../partials/typography";
 @import "../partials/plugins/@angular/material/index";
 
+// Layouts
+@import "../partials/layouts/layout-apollo";
+@import "../partials/layouts/layout-ares";
+@import "../partials/layouts/layout-hermes";
+@import "../partials/layouts/layout-ikaros";
+@import "../partials/layouts/layout-poseidon";
+@import "../partials/layouts/layout-zeus";
+
+
 html {
   box-sizing: border-box;
   font-size: 16px;

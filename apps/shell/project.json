@@ -41,8 +41,8 @@
           }
         ],
         "styles": [
-          "apps/shell/src/styles.scss",
-          "libs/core/stylesheets/src/lib/tailwind.scss"
+          "libs/core/stylesheets/src/lib/tailwind.scss",
+          "apps/shell/src/styles.scss"
         ],
         "stylePreprocessorOptions": {
           "includePaths": ["libs/core/stylesheets/src/lib/styles/"]

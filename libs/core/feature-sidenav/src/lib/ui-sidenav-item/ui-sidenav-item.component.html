@@ -3,10 +3,10 @@
   [fragment]="item.fragment"
   [routerLinkActiveOptions]="item.routerLinkActiveOptions || { exact: false }"
   [routerLink]="item.route"
-  class="nx-ratenow-sidenav-item"
+  class="ratenow-sidenav-item"
   matRipple
   matRippleColor="var(--sidenav-item-ripple-color)"
-  routerLinkActive="nx-ratenow-sidenav-item--active"
+  routerLinkActive="ratenow-sidenav-item--active"
 >
   <mat-icon
     *ngIf="level === 0"
@@ -25,10 +25,10 @@
 <div
   (click)="item.route()"
   *ngIf="isLink(item) && isFunction(item.route)"
-  class="nx-ratenow-sidenav-item"
+  class="ratenow-sidenav-item"
   matRipple
   matRippleColor="var(--sidenav-item-ripple-color)"
-  routerLinkActive="nx-ratenow-sidenav-item--active"
+  routerLinkActive="ratenow-sidenav-item--active"
 >
   <mat-icon
     *ngIf="level === 0"
@@ -47,9 +47,9 @@
 <ng-container *ngIf="isDropdown(item)">
   <div
     (click)="toggleOpen()"
-    [class.nx-ratenow-sidenav-item--active]="isOpen || isActive"
-    [class.nx-ratenow-sidenav-item--open]="isOpen"
-    class="nx-ratenow-sidenav-item"
+    [class.ratenow-sidenav-item--active]="isOpen || isActive"
+    [class.ratenow-sidenav-item--open]="isOpen"
+    class="ratenow-sidenav-item"
     matRipple
     matRippleColor="var(--sidenav-item-ripple-color)"
   >

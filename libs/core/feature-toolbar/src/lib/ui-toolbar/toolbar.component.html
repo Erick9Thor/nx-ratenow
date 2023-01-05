@@ -80,7 +80,8 @@
     </button>
   </mat-menu>
 
-  <div #megaMenuOriginRef class="ltr:ml-2 rtl:mr-2">
+  <!-- TODO: Add when we have time -->
+  <!-- <div #megaMenuOriginRef class="ltr:ml-2 rtl:mr-2">
     <button
       *ngIf="isHorizontalLayout$ | async"
       [class.hidden]="mobileQuery"
@@ -93,7 +94,7 @@
       <span>Mega Menu</span>
       <mat-icon class="icon-sm" svgIcon="mat:arrow_drop_down"></mat-icon>
     </button>
-  </div>
+  </div> -->
 
   <div
     *ngIf="(isVerticalLayout$ | async) && (isNavbarInToolbar$ | async)"
@@ -109,11 +110,12 @@
   <span class="flex-1"></span>
 
   <div class="-mx-1 flex items-center">
-    <div class="px-1">
+    <!-- TODO: ADD search -->
+    <!-- <div class="px-1">
       <button (click)="openSearch()" mat-icon-button type="button">
         <mat-icon color="primary" svgIcon="mat:search"></mat-icon>
       </button>
-    </div>
+    </div> -->
 
     <div class="px-1">
       <nx-ratenow-toolbar-notifications></nx-ratenow-toolbar-notifications>

@@ -47,6 +47,52 @@
   </div>
 
   <div class="section">
+    <h5 class="subheading">PRE-BUILT STYLES</h5>
+
+    <div
+      *ngFor="let config of configs; let first = first"
+      [class.mt-6]="!first"
+      class="rounded"
+    >
+      <div
+        class="layout-image rounded overflow-hidden relative hover:bg-hover shadow-md"
+      >
+        <img [src]="config.imgSrc" class="w-full block" />
+        <div
+          class="layout-image-overlay flex items-center justify-center gap-1"
+        >
+          <button
+            (click)="setConfig(config.id, ColorSchemeName.light)"
+            class="bg-contrast-white text-contrast-black flex-none !min-w-0"
+            mat-raised-button
+            type="button"
+          >
+            LIGHT
+          </button>
+          <button
+            (click)="setConfig(config.id, ColorSchemeName.default)"
+            color="primary"
+            class="flex-none !min-w-0"
+            mat-raised-button
+            type="button"
+          >
+            DEFAULT
+          </button>
+          <button
+            (click)="setConfig(config.id, ColorSchemeName.dark)"
+            class="bg-contrast-black text-contrast-white flex-none !min-w-0"
+            mat-raised-button
+            type="button"
+          >
+            DARK
+          </button>
+        </div>
+      </div>
+      <div class="text-center body-2 mt-2">{{ config.name }}</div>
+    </div>
+  </div>
+
+  <div class="section">
     <h5 class="subheading">Layout</h5>
 
     <div class="section-content">

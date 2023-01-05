@@ -13,7 +13,7 @@ import { DeepPartial, mergeDeep } from '@nx-ratenow/core/utils';
   providedIn: 'root'
 })
 export abstract class ConfigService {
-  defaultConfig: RateNowConfigName = RateNowConfigName.basic;
+  defaultConfig: RateNowConfigName = RateNowConfigName.poseidon;
   configs: RateNowConfig[] = configs;
 
   private _configSubject = new BehaviorSubject(

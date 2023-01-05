@@ -16,9 +16,10 @@ function withOpacityValue(variable) {
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    join(__dirname, 'src/**/!(*.stories|*.spec).{ts,html}'),
+    join(__dirname, 'src/**/!(*.stories|*.spec).{html,ts}'),
     ...createGlobPatternsForDependencies(__dirname)
   ],
+  important: ':root',
   theme: {
     screens: {
       sm: '600px',

@@ -78,8 +78,8 @@ export class AppComponent {
         children: [
           {
             type: 'link',
-            label: 'Analytics',
-            route: '/',
+            label: 'Benchmark',
+            route: '/benchmark',
             icon: 'mat:insights',
             routerLinkActiveOptions: { exact: true }
           }
