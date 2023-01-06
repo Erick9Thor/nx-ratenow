@@ -25,8 +25,8 @@ const defaultConfig: RateNowConfig = {
   layout: 'horizontal',
   boxed: false,
   sidenav: {
-    title: 'VEX',
-    imageUrl: 'assets/img/demo/logo.svg',
+    title: 'RateNow',
+    imageUrl: 'assets/img/demo/logo.png',
     showCollapsePin: true,
     user: {
       visible: true

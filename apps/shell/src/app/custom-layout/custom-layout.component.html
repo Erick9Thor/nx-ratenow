@@ -8,14 +8,14 @@
   <nx-ratenow-toolbar
     [hasShadow]="toolbarShadowEnabled$ | async"
     [mobileQuery]="(isDesktop$ | async) === false"
-    class="nx-ratenow-toolbar"
+    class="ratenow-toolbar"
   ></nx-ratenow-toolbar>
 </ng-template>
 
 <ng-template #footerRef>
   <nx-ratenow-footer
     *ngIf="isFooterVisible$ | async"
-    class="nx-ratenow-footer"
+    class="ratenow-footer"
   ></nx-ratenow-footer>
 </ng-template>
 

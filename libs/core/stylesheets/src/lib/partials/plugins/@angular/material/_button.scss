@@ -1,5 +1,5 @@
 :root {
-  .mat-button, .mat-stroked-button, .mat-flat-button, .mat-raised-button {
+  .mat-mdc-button, .mat-mdc-outlined-button, .mat-mdc-unelevated-button, .mat-mdc-raised-button {
     @apply rounded-button min-w-[6rem];
   }
 

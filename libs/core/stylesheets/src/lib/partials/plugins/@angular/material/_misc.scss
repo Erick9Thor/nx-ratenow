@@ -1,22 +1,22 @@
-.mat-icon-button .mat-button-wrapper > *,
-.mat-menu-item .mat-icon,
-.mat-button .mat-icon {
+.mat-mdc-icon-button .mat-button-wrapper > *,
+.mat-mdc-menu-item .mat-icon,
+.mat-mdc-button .mat-icon {
   vertical-align: middle !important;
 }
 
 .mat-form-field-suffix, .mat-form-field-prefix {
-  .mat-icon-button .mat-icon {
+  .mat-mdc-icon-button .mat-icon {
     font-size: inherit;
   }
 }
 
-.mat-table {
-  mat-row,
-  mat-header-row,
-  mat-footer-row,
-  th.mat-header-cell,
-  td.mat-cell,
-  td.mat-footer-cell {
+.mat-mdc-table {
+  mat-mdc-row,
+  mat-mdc-header-row,
+  mat-mdc-footer-row,
+  th.mat-mdc-header-cell,
+  td.mat-mdc-cell,
+  td.mat-mdc-footer-cell{
     border-bottom-color: var(--foreground-divider);
   }
 }
@@ -44,8 +44,8 @@
   }
 }
 
-.mat-table .mat-cell,
-.mat-table .mat-header-cell {
+.mat-mdc-table .mat-mdc-cell,
+.mat-mdc-table .mat-mdc-header-cell {
   box-sizing: content-box;
   padding-left: var(--padding-12);
   padding-right: var(--padding-12);
@@ -56,7 +56,7 @@
   padding-top: 0;
 }
 
-.mat-select-panel {
+.mat-mdc-select-panel {
   @apply text-base;
 }
 
@@ -89,7 +89,7 @@ textarea.mat-input-element {
     opacity: 1;
   }
 
-  .mat-tab-link.mat-tab-label-active {
+  .mat-mdc-tab-link.mat-tab-label-active {
     opacity: 1;
   }
 }
@@ -104,6 +104,6 @@ textarea.mat-input-element {
   text-transform: uppercase;
 }
 
-.mat-card-image {
+.mat-mdc-card-image {
   max-width: none;
 }

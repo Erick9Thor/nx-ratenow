@@ -1,13 +1,13 @@
 :root {
-  .mat-menu-panel {
+  .mat-mdc-menu-panel {
     @apply rounded shadow;
   }
 
-  .mat-menu-content {
+  .mat-mdc-menu-content {
     @apply p-2;
   }
 
-  .mat-menu-item {
+  .mat-mdc-menu-item {
     @apply flex items-center rounded text-sm font-medium h-10 pl-2 pr-6 transition duration-100 ease-out;
 
     &:hover:not([disabled]) {
@@ -26,12 +26,12 @@
     }
   }
 
-  .mat-menu-item-submenu-trigger {
+  .mat-mdc-menu-item-submenu-trigger {
     @apply pr-12;
   }
 }
 
-.mat-menu-item .mat-icon-no-color,
+.mat-mdc-menu-item .mat-icon-no-color,
 .mat-menu-submenu-icon {
   color: currentColor;
 }

@@ -1,9 +1,9 @@
 :root {
-  .mat-select-panel {
+  .mat-mdc-select-panel {
     @apply rounded shadow p-2;
   }
 
-  .mat-option {
+  .mat-mdc-option {
     @apply rounded text-sm font-medium h-10 transition duration-100 ease-out;
 
     &:hover, &.mat-active {
@@ -21,12 +21,12 @@
       width: 1.25rem;
     }
 
-    &.mat-selected:not(.mat-option-multiple) {
+    &.mat-selected:not(.mat-mdc-option-multiple) {
       @apply bg-primary/20;
     }
   }
 
-  .mat-menu-item-submenu-trigger {
+  .mat-mdc-menu-item-submenu-trigger {
     @apply pr-12;
   }
 }
