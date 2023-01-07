@@ -46,6 +46,8 @@ export class AppComponent {
     if (this.platform.BLINK) {
       this.renderer.addClass(this.document.body, 'is-blink');
     }
+
+    // TODO: Move this into project.json or a service
     this.matIconRegistry.addSvgIconResolver(
       (
         name: string,
@@ -69,7 +71,7 @@ export class AppComponent {
     );
 
     /**
-     * Add Routes here
+     * TODO: Create a sidebar file with this object
      */
     this.navigationService.items = [
       {

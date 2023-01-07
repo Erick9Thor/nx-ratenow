@@ -16,9 +16,11 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 })
 export class CustomLayoutComponent implements OnInit {
   sidenavCollapsed$ = this.layoutService.sidenavCollapsed$;
+
   isFooterVisible$ = this.configService.config$.pipe(
     map((config) => config.footer.visible)
   );
+
   isDesktop$ = this.layoutService.isDesktop$;
 
   toolbarShadowEnabled$ = this.router.events.pipe(
