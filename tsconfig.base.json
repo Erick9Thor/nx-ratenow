@@ -31,23 +31,23 @@
       "@nx-ratenow/core/feature-user-menu": [
         "libs/core/feature-user-menu/src/index.ts"
       ],
-      "@nx-ratenow/core/layout/feature-footer": [
-        "libs/core/layout/feature-footer/src/index.ts"
+      "@nx-ratenow/core/feature-footer": [
+        "libs/core/feature-footer/src/index.ts"
       ],
-      "@nx-ratenow/core/layout/feature-layaout": [
-        "libs/core/layout/feature-layaout/src/index.ts"
+      "@nx-ratenow/core/feature-layaout": [
+        "libs/core/feature-layaout/src/index.ts"
       ],
-      "@nx-ratenow/core/layout/feature-navigation": [
-        "libs/core/layout/feature-navigation/src/index.ts"
+      "@nx-ratenow/core/feature-navigation": [
+        "libs/core/feature-navigation/src/index.ts"
       ],
-      "@nx-ratenow/core/layout/feature-quickpanel": [
-        "libs/core/layout/feature-quickpanel/src/index.ts"
+      "@nx-ratenow/core/feature-quickpanel": [
+        "libs/core/feature-quickpanel/src/index.ts"
       ],
-      "@nx-ratenow/core/layout/feature-sidenav": [
-        "libs/core/layout/feature-sidenav/src/index.ts"
+      "@nx-ratenow/core/feature-sidenav": [
+        "libs/core/feature-sidenav/src/index.ts"
       ],
-      "@nx-ratenow/core/layout/feature-toolbar": [
-        "libs/core/layout/feature-toolbar/src/index.ts"
+      "@nx-ratenow/core/feature-toolbar": [
+        "libs/core/feature-toolbar/src/index.ts"
       ],
       "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
       "@nx-ratenow/core/pipes": ["libs/core/pipes/src/index.ts"],

@@ -1,6 +1,13 @@
 import { Platform } from '@angular/cdk/platform';
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, LOCALE_ID, Renderer2 } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Inject,
+  LOCALE_ID,
+  Renderer2,
+  ViewChild
+} from '@angular/core';
 import {
   MatIconRegistry,
   SafeResourceUrlWithIconOptions
