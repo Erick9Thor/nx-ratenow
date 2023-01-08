@@ -86,5 +86,10 @@
       "style": "scss"
     }
   },
-  "defaultProject": "shell"
+  "defaultProject": "shell",
+  "pluginsConfig": {
+    "@nrwl/js": {
+      "analyzeSourceFiles": false
+    }
+  }
 }
