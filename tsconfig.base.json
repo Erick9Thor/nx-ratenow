@@ -25,6 +25,9 @@
       "@nx-ratenow/core/data-access-layaout": [
         "libs/core/data-access-layaout/src/index.ts"
       ],
+      "@nx-ratenow/core/feature-user-menu": [
+        "libs/core/feature-user-menu/src/index.ts"
+      ],
       "@nx-ratenow/core/layout/feature-footer": [
         "libs/core/layout/feature-footer/src/index.ts"
       ],
@@ -47,14 +50,23 @@
       "@nx-ratenow/core/pipes": ["libs/core/pipes/src/index.ts"],
       "@nx-ratenow/core/stylesheets": ["libs/core/stylesheets/src/index.ts"],
       "@nx-ratenow/core/utils": ["libs/core/utils/src/index.ts"],
+      "@nx-ratenow/shared/feature-breadcrumbs": [
+        "libs/shared/feature-breadcrumbs/src/index.ts"
+      ],
       "@nx-ratenow/shared/feature-popover": [
         "libs/shared/feature-popover/src/index.ts"
       ],
       "@nx-ratenow/shared/feature-scrollbar": [
         "libs/shared/feature-scrollbar/src/index.ts"
       ],
+      "@nx-ratenow/shared/feature-secondary-toolbar": [
+        "libs/shared/feature-secondary-toolbar/src/index.ts"
+      ],
       "@nx-ratenow/shared/feature-sidebar": [
         "libs/shared/feature-sidebar/src/index.ts"
+      ],
+      "@nx-ratenow/shared/modals/feature-search-modal": [
+        "libs/shared/modals/feature-search-modal/src/index.ts"
       ]
     }
   },

@@ -1,0 +1,44 @@
+{
+  "name": "shared-feature-breadcrumbs",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/feature-breadcrumbs/src",
+  "prefix": "nx-ratenow",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/shared/feature-breadcrumbs/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/shared/feature-breadcrumbs/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/shared/feature-breadcrumbs/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/shared/feature-breadcrumbs/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/feature-breadcrumbs/**/*.ts",
+          "libs/shared/feature-breadcrumbs/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

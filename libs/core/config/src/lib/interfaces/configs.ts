@@ -4,6 +4,7 @@ import { RateNowConfigName } from './config-name.model';
 import { RateNowConfig } from './ratenow-config.interface';
 import { mergeDeep } from '@nx-ratenow/core/utils';
 
+// TODO: fix all this assets ref
 const defaultConfig: RateNowConfig = {
   id: RateNowConfigName.apollo,
   name: 'Apollo',

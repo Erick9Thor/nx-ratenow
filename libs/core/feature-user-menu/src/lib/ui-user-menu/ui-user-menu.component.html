@@ -1,0 +1,76 @@
+<div class="ratenow-user-menu">
+  <a
+    (click)="close()"
+    [routerLink]="['/apps/social']"
+    class="ratenow-user-menu-item"
+    matRipple
+    matRippleColor="rgb(var(--color-primary), 0.1)"
+  >
+    <mat-icon
+      class="ratenow-user-menu-item__icon icon-sm"
+      svgIcon="mat:account_circle"
+    ></mat-icon>
+    <div class="ratenow-user-menu-item__label">Your Profile</div>
+  </a>
+
+  <a
+    (click)="close()"
+    [routerLink]="['/']"
+    class="ratenow-user-menu-item"
+    matRipple
+    matRippleColor="rgb(var(--color-primary), 0.1)"
+  >
+    <mat-icon
+      class="ratenow-user-menu-item__icon icon-sm"
+      svgIcon="mat:insights"
+    ></mat-icon>
+    <div class="ratenow-user-menu-item__label">Analytics</div>
+    <div class="ratenow-user-menu-item__badge">NEW</div>
+  </a>
+
+  <a
+    (click)="close()"
+    [routerLink]="['/apps/social/timeline']"
+    class="ratenow-user-menu-item"
+    matRipple
+    matRippleColor="rgb(var(--color-primary), 0.1)"
+  >
+    <mat-icon
+      class="ratenow-user-menu-item__icon icon-sm"
+      svgIcon="mat:settings"
+    ></mat-icon>
+    <div class="ratenow-user-menu-item__label">Account Settings</div>
+  </a>
+
+  <div class="border-b border-divider mx-4"></div>
+
+  <div
+    class="ratenow-user-menu-item"
+    matRipple
+    matRippleColor="rgb(var(--color-primary), 0.1)"
+  >
+    <mat-icon
+      class="ratenow-user-menu-item__icon icon-sm"
+      svgIcon="mat:switch_account"
+    ></mat-icon>
+    <div class="ratenow-user-menu-item__label">Switch Account</div>
+    <mat-icon
+      class="ratenow-user-menu-item__icon icon-sm"
+      svgIcon="mat:chevron_right"
+    ></mat-icon>
+  </div>
+
+  <a
+    (click)="close()"
+    [routerLink]="['/login']"
+    class="ratenow-user-menu-item"
+    matRipple
+    matRippleColor="rgb(var(--color-primary), 0.1)"
+  >
+    <mat-icon
+      class="ratenow-user-menu-item__icon icon-sm"
+      svgIcon="mat:logout"
+    ></mat-icon>
+    <div class="ratenow-user-menu-item__label">Sign Out</div>
+  </a>
+</div>

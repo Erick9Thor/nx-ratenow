@@ -1,4 +1,4 @@
-import { ElementRef, Injectable, Injector } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 import {
   ConnectionPositionPair,
   Overlay,
@@ -6,19 +6,9 @@ import {
   PositionStrategy
 } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
-import { PopoverContent, PopoverRef } from '../ui-popover/popover-ref';
+import { PopoverRef } from '../models/popover-ref';
 import { UiPopoverComponent } from '../ui-popover/ui-popover.component';
-
-export interface PopoverParams<T> {
-  width?: string | number;
-  height?: string | number;
-  origin: ElementRef | HTMLElement;
-  position?: ConnectionPositionPair[];
-  content: PopoverContent;
-  data?: T;
-  offsetY?: number;
-  offsetX?: number;
-}
+import { PopoverParams } from '../models/popover.models';
 
 @Injectable({
   providedIn: 'root'

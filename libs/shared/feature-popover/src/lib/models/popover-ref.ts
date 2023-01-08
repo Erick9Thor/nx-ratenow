@@ -2,6 +2,7 @@ import { OverlayRef } from '@angular/cdk/overlay';
 import { Subject } from 'rxjs';
 import { TemplateRef, Type } from '@angular/core';
 
+// TODO: Fix all any
 export interface PopoverCloseEvent<T = any> {
   type: 'backdropClick' | 'close';
   data: T;

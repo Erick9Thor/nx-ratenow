@@ -1,10 +1,15 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, Input } from '@angular/core';
 
+// TODO: Add Hostbinding
 @Component({
   selector: 'nx-ratenow-ui-sidebar',
   templateUrl: './ui-sidebar.component.html',
-  styleUrls: ['./ui-sidebar.component.scss']
+  styleUrls: ['./ui-sidebar.component.scss'],
+  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
+  host: {
+    class: 'nx-ratenow-ui-sidebar'
+  }
 })
 export class UiSidebarComponent {
   @Input() position: 'left' | 'right' = 'left';
@@ -32,14 +37,14 @@ export class UiSidebarComponent {
   }
 
   enableScrollblock() {
-    if (!this.document.body.classList.contains('rate-now-scrollblock')) {
-      this.document.body.classList.add('rate-now-scrollblock');
+    if (!this.document.body.classList.contains('ratenow-scrollblock')) {
+      this.document.body.classList.add('ratenow-scrollblock');
     }
   }
 
   disableScrollblock() {
-    if (this.document.body.classList.contains('rate-now-scrollblock')) {
-      this.document.body.classList.remove('rate-now-scrollblock');
+    if (this.document.body.classList.contains('ratenow-scrollblock')) {
+      this.document.body.classList.remove('ratenow-scrollblock');
     }
   }
 

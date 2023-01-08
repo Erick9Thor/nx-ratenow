@@ -6,9 +6,10 @@ import {
   NavigationLink,
   NavigationService
 } from '@nx-ratenow/core/data-access-layaout';
+import { UiUserMenuComponent } from '@nx-ratenow/core/feature-user-menu';
 import { PopoverService } from '@nx-ratenow/shared/feature-popover';
 import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, startWith, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'nx-ratenow-ui-sidenav',
@@ -66,25 +67,25 @@ export class UiSidenavComponent {
   }
 
   openProfileMenu(origin: HTMLDivElement): void {
-    // this.userMenuOpen$ = of(
-    //   this.popoverService.open({
-    //     content: UserMenuComponent,
-    //     origin,
-    //     offsetY: -8,
-    //     width: origin.clientWidth,
-    //     position: [
-    //       {
-    //         originX: 'center',
-    //         originY: 'top',
-    //         overlayX: 'center',
-    //         overlayY: 'bottom'
-    //       }
-    //     ]
-    //   })
-    // ).pipe(
-    //   switchMap((popoverRef) => popoverRef.afterClosed$.pipe(map(() => false))),
-    //   startWith(true)
-    // );
+    this.userMenuOpen$ = of(
+      this.popoverService.open({
+        content: UiUserMenuComponent,
+        origin,
+        offsetY: -8,
+        width: origin.clientWidth,
+        position: [
+          {
+            originX: 'center',
+            originY: 'top',
+            overlayX: 'center',
+            overlayY: 'bottom'
+          }
+        ]
+      })
+    ).pipe(
+      switchMap((popoverRef) => popoverRef.afterClosed$.pipe(map(() => false))),
+      startWith(true)
+    );
   }
 
   openSearch(): void {

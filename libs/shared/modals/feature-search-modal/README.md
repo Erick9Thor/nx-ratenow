@@ -1,0 +1,7 @@
+# shared-modals-feature-search-modal
+
+This library was generated with [Nx](https://nx.dev).
+
+## Running unit tests
+
+Run `nx test shared-modals-feature-search-modal` to execute the unit tests.
