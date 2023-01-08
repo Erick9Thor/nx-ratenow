@@ -26,6 +26,8 @@
     "@ngrx/entity": "^15.1.0",
     "@ngrx/router-store": "^15.1.0",
     "@ngrx/store": "^15.1.0",
+    "@ngx-loading-bar/core": "^6.0.2",
+    "@ngx-loading-bar/router": "^6.0.2",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
     "@nrwl/angular": "^15.4.2",
