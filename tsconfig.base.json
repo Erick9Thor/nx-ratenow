@@ -18,18 +18,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-ratenow/benchmark/dashboard/feature": [
+        "libs/benchmark/dashboard/feature/src/index.ts"
+      ],
       "@nx-ratenow/core/animations": ["libs/core/animations/src/index.ts"],
       "@nx-ratenow/core/assets": ["libs/core/assets/src/index.ts"],
       "@nx-ratenow/core/config": ["libs/core/config/src/index.ts"],
       "@nx-ratenow/core/config-panel": ["libs/core/config-panel/src/index.ts"],
       "@nx-ratenow/core/data-access-layaout": [
         "libs/core/data-access-layaout/src/index.ts"
-      ],
-      "@nx-ratenow/core/feature-progress-bar-loader": [
-        "libs/core/feature-progress-bar-loader/src/index.ts"
-      ],
-      "@nx-ratenow/core/feature-user-menu": [
-        "libs/core/feature-user-menu/src/index.ts"
       ],
       "@nx-ratenow/core/feature-footer": [
         "libs/core/feature-footer/src/index.ts"
@@ -40,6 +37,12 @@
       "@nx-ratenow/core/feature-navigation": [
         "libs/core/feature-navigation/src/index.ts"
       ],
+      "@nx-ratenow/core/feature-page-layout": [
+        "libs/core/feature-page-layout/src/index.ts"
+      ],
+      "@nx-ratenow/core/feature-progress-bar-loader": [
+        "libs/core/feature-progress-bar-loader/src/index.ts"
+      ],
       "@nx-ratenow/core/feature-quickpanel": [
         "libs/core/feature-quickpanel/src/index.ts"
       ],
@@ -48,6 +51,9 @@
       ],
       "@nx-ratenow/core/feature-toolbar": [
         "libs/core/feature-toolbar/src/index.ts"
+      ],
+      "@nx-ratenow/core/feature-user-menu": [
+        "libs/core/feature-user-menu/src/index.ts"
       ],
       "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
       "@nx-ratenow/core/pipes": ["libs/core/pipes/src/index.ts"],
