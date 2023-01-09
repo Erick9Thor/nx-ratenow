@@ -34,6 +34,9 @@
       "@nx-ratenow/core/feature-progress-bar-loader": [
         "libs/core/feature-progress-bar-loader/src/index.ts"
       ],
+      "@nx-ratenow/core/feature-tab-page": [
+        "libs/core/feature-tab-page/src/index.ts"
+      ],
       "@nx-ratenow/core/feature-user-menu": [
         "libs/core/feature-user-menu/src/index.ts"
       ],
@@ -58,10 +61,8 @@
       "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
       "@nx-ratenow/core/pipes": ["libs/core/pipes/src/index.ts"],
       "@nx-ratenow/core/stylesheets": ["libs/core/stylesheets/src/index.ts"],
-      "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"],
-      "@nx-ratenow/shared/feature-table": [
-        "libs/shared/feature-table/src/index.ts"],
       "@nx-ratenow/core/utils": ["libs/core/utils/src/index.ts"],
+      "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"],
       "@nx-ratenow/shared/feature-breadcrumbs": [
         "libs/shared/feature-breadcrumbs/src/index.ts"
       ],
@@ -76,6 +77,9 @@
       ],
       "@nx-ratenow/shared/feature-sidebar": [
         "libs/shared/feature-sidebar/src/index.ts"
+      ],
+      "@nx-ratenow/shared/feature-table": [
+        "libs/shared/feature-table/src/index.ts"
       ],
       "@nx-ratenow/shared/modals/feature-search-modal": [
         "libs/shared/modals/feature-search-modal/src/index.ts"
