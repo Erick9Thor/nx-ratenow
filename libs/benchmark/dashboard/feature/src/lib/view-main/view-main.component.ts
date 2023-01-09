@@ -15,6 +15,7 @@ import {
 })
 export class ViewMainComponent implements OnInit {
   layoutCtrl = new UntypedFormControl('boxed');
+  addable = false;
 
   /**
    * Simulating a service with HTTP that returns Observables

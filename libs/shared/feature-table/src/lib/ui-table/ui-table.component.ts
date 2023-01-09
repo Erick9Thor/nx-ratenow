@@ -53,6 +53,8 @@ export class UiTableComponent implements OnInit, AfterContentInit {
     return this._data;
   }
 
+  @Input() addable = true;
+
   dataSource!: MatTableDataSource<object>;
 
   pageSize = 10;

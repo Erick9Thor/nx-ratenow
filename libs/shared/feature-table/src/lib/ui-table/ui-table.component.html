@@ -66,11 +66,12 @@
     </button>
 
     <button
+      *ngIf="addable"
       (click)="createObject()"
       class="ml-4 flex-none"
       color="primary"
       mat-mini-fab
-      matTooltip="Add Customer"
+      matTooltip="Add"
       type="button"
     >
       <mat-icon svgIcon="mat:add"></mat-icon>
@@ -222,7 +223,7 @@
       <td *matCellDef="let row" class="w-10 text-secondary" mat-cell>
         <button
           (click)="$event.stopPropagation()"
-          [matMenuTriggerData]="{ customer: row }"
+          [matMenuTriggerData]="{ data: row }"
           [matMenuTriggerFor]="actionsMenu"
           mat-icon-button
           type="button"
@@ -267,12 +268,12 @@
 
 <!-- ACTION MENU -->
 <mat-menu #actionsMenu="matMenu" xPosition="before" yPosition="below">
-  <ng-template let-customer="customer" matMenuContent>
-    <button (click)="updateObject(customer)" mat-menu-item>
+  <ng-template let-data="data" matMenuContent>
+    <button (click)="updateObject(data)" mat-menu-item>
       <mat-icon svgIcon="mat:edit"></mat-icon>
       <span>Modify</span>
     </button>
-    <button (click)="deleteObject(customer)" mat-menu-item>
+    <button (click)="deleteObject(data)" mat-menu-item>
       <mat-icon svgIcon="mat:delete"></mat-icon>
       <span>Delete</span>
     </button>
