@@ -50,7 +50,9 @@ export class ViewMainComponent implements OnInit, AfterViewInit {
    * You probably want to remove this and do all requests in a service with HTTP
    */
   subject$: ReplaySubject<Customer[]> = new ReplaySubject<Customer[]>(1);
+
   data$: Observable<Customer[]> = this.subject$.asObservable();
+
   customers!: Customer[];
 
   @Input()
@@ -115,6 +117,7 @@ export class ViewMainComponent implements OnInit, AfterViewInit {
     { label: 'Labels', property: 'labels', type: 'button', visible: true },
     { label: 'Actions', property: 'actions', type: 'button', visible: true }
   ];
+
   pageSize = 10;
   pageSizeOptions: number[] = [5, 10, 20, 50];
   dataSource!: MatTableDataSource<Customer>;

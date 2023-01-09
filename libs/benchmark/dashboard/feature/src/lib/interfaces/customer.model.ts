@@ -1,3 +1,125 @@
+// TABLE
+export interface TableColumn<T> {
+  label: string;
+  property: string;
+  type: 'text' | 'image' | 'badge' | 'progress' | 'checkbox' | 'button';
+  visible?: boolean;
+  cssClasses?: string[];
+}
+
+export const aioTableLabels = [
+  {
+    text: 'New',
+    textClass: 'text-green',
+    bgClass: 'bg-green-light',
+    previewClass: 'bg-green'
+  },
+  {
+    text: 'Lead',
+    textClass: 'text-cyan',
+    bgClass: 'bg-cyan-light',
+    previewClass: 'bg-cyan'
+  },
+  {
+    text: 'In Progress',
+    textClass: 'text-teal',
+    bgClass: 'bg-teal-light',
+    previewClass: 'bg-teal'
+  },
+  {
+    text: 'Completed',
+    textClass: 'text-purple',
+    bgClass: 'bg-purple-light',
+    previewClass: 'bg-purple'
+  }
+];
+
+// TODO: MOVE BENCHMARK TABLE
+interface BenchmarkClient {
+  id: number;
+  name: string;
+  userNumber: number;
+  registerDate: string;
+}
+export class BenchMarkClient {
+  id: number;
+  name: string;
+  userNumber: number;
+  registerDate: string;
+
+  constructor(benchmarkClient: BenchmarkClient) {
+    this.id = benchmarkClient.id;
+    this.name = benchmarkClient.name;
+    this.userNumber = benchmarkClient.userNumber;
+    this.registerDate = benchmarkClient.registerDate;
+  }
+}
+
+interface BenchmarkQuestionnaire {
+  id: number;
+  name: string;
+  preview: string;
+  language: string;
+  section: string;
+  subSection: string;
+}
+export class BenchMarkQuestionnaire {
+  id: number;
+  name: string;
+  preview: string;
+  language: string;
+  section: string;
+  subSection: string;
+
+  constructor(benchmarkQuestionnaire: BenchmarkQuestionnaire) {
+    this.id = benchmarkQuestionnaire.id;
+    this.name = benchmarkQuestionnaire.name;
+    this.preview = benchmarkQuestionnaire.preview;
+    this.language = benchmarkQuestionnaire.language;
+    this.section = benchmarkQuestionnaire.section;
+    this.subSection = benchmarkQuestionnaire.subSection;
+  }
+}
+
+export const tableBenchmarkClientData = [
+  {
+    id: 0,
+    name: 'Benchmarks_es',
+    userNumber: 100,
+    registerDate: '2022-08-12'
+  },
+  {
+    id: 1,
+    name: 'Benchmarks_it',
+    userNumber: 100,
+    registerDate: '2022-08-12'
+  },
+  {
+    id: 2,
+    name: 'Benchmarks_ge',
+    userNumber: 100,
+    registerDate: '2022-08-12'
+  },
+  {
+    id: 3,
+    name: 'Benchmarks_fr',
+    userNumber: 100,
+    registerDate: '2022-08-12'
+  }
+];
+
+export const tableBenchmarkQuestionnaireData = [
+  {
+    id: 0,
+    name: 'Sanidad_es',
+    state: 'Online',
+    language: 'es',
+    section: 'Sanidad',
+    subSection: 'Sanidad'
+  }
+];
+
+// TODO: MOVE CUSTOMERS
 export class Customer {
   id: number;
   imageSrc: string;
@@ -37,49 +159,10 @@ export class Customer {
     return name;
   }
 
-  set name(value) {}
-
   get address() {
     return `${this.street}, ${this.zipcode} ${this.city}`;
   }
-
-  set address(value) {}
 }
-
-export interface TableColumn<T> {
-  label: string;
-  property: string;
-  type: 'text' | 'image' | 'badge' | 'progress' | 'checkbox' | 'button';
-  visible?: boolean;
-  cssClasses?: string[];
-}
-
-export const aioTableLabels = [
-  {
-    text: 'New',
-    textClass: 'text-green',
-    bgClass: 'bg-green-light',
-    previewClass: 'bg-green'
-  },
-  {
-    text: 'Lead',
-    textClass: 'text-cyan',
-    bgClass: 'bg-cyan-light',
-    previewClass: 'bg-cyan'
-  },
-  {
-    text: 'In Progress',
-    textClass: 'text-teal',
-    bgClass: 'bg-teal-light',
-    previewClass: 'bg-teal'
-  },
-  {
-    text: 'Completed',
-    textClass: 'text-purple',
-    bgClass: 'bg-purple-light',
-    previewClass: 'bg-purple'
-  }
-];
 
 export const aioTableData = [
   {

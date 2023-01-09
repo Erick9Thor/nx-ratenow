@@ -86,7 +86,8 @@ export const configs: RateNowConfig[] = [
         }
       },
       footer: {
-        fixed: false
+        fixed: true,
+        visible: true
       }
     }
   ),
@@ -110,7 +111,8 @@ export const configs: RateNowConfig[] = [
         fixed: false
       },
       footer: {
-        fixed: false
+        fixed: true,
+        visible: true
       }
     }
   ),
@@ -135,7 +137,8 @@ export const configs: RateNowConfig[] = [
         position: 'in-toolbar'
       },
       footer: {
-        fixed: false
+        fixed: true,
+        visible: true
       }
     }
   ),
@@ -173,7 +176,8 @@ export const configs: RateNowConfig[] = [
         position: 'in-toolbar'
       },
       footer: {
-        fixed: false
+        fixed: true,
+        visible: true
       }
     }
   )
