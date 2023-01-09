@@ -58,7 +58,6 @@
       "@nx-ratenow/core/layout/feature-toolbar": [
         "libs/core/layout/feature-toolbar/src/index.ts"
       ],
-      "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
       "@nx-ratenow/core/pipes": ["libs/core/pipes/src/index.ts"],
       "@nx-ratenow/core/stylesheets": ["libs/core/stylesheets/src/index.ts"],
       "@nx-ratenow/core/utils": ["libs/core/utils/src/index.ts"],
