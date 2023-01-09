@@ -1,5 +1,5 @@
 import {
-  AfterViewInit,
+  AfterContentInit,
   Component,
   Input,
   OnInit,
@@ -29,18 +29,28 @@ import { MatSelectChange } from '@angular/material/select';
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: {
-        appearance: 'standard'
+        appearance: 'fill'
       } as unknown as MatFormFieldDefaultOptions
     }
   ]
 })
-export class UiTableComponent implements OnInit, AfterViewInit {
+export class UiTableComponent implements OnInit, AfterContentInit {
   @Input() set columns(value: TableColumn<object>[]) {
     this._columns = value;
   }
 
   get columns(): TableColumn<object>[] {
     return this._columns;
+  }
+
+  @Input() set data(value: object[]) {
+    if (value.length > 0) {
+      this._data = value;
+    }
+  }
+
+  get data(): object[] {
+    return this._data;
   }
 
   dataSource!: MatTableDataSource<object>;
@@ -55,6 +65,7 @@ export class UiTableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatTable, { static: true }) table!: MatTable<object>;
 
   _columns: TableColumn<object>[] = [];
+  _data: object[] = [];
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource();
@@ -64,10 +75,11 @@ export class UiTableComponent implements OnInit, AfterViewInit {
       .subscribe((value) => this.onFilterChange(value));
   }
 
-  ngAfterViewInit() {
+  ngAfterContentInit() {
     if (this.dataSource) {
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+      this.dataSource.data = this._data;
     }
   }
 
@@ -88,60 +100,60 @@ export class UiTableComponent implements OnInit, AfterViewInit {
 
   createObject() {
     // this.dialog
-    //   .open(CustomerCreateUpdateComponent)
+    //   .open(objectCreateUpdateComponent)
     //   .afterClosed()
-    //   .subscribe((customer: Customer) => {
+    //   .subscribe((object: object) => {
     //     /**
-    //      * Customer is the updated customer (if the user pressed Save - otherwise it's null)
+    //      * object is the updated object (if the user pressed Save - otherwise it's null)
     //      */
-    //     if (customer) {
+    //     if (object) {
     //       /**
     //        * Here we are updating our local array.
     //        * You would probably make an HTTP request here.
     //        */
-    //       this.customers.unshift(new Customer(customer));
-    //       this.subject$.next(this.customers);
+    //       this.objects.unshift(new object(object));
+    //       this.subject$.next(this.objects);
     //     }
     //   });
   }
 
-  updateObject(customer: any) {
+  updateObject(object: any) {
     // this.dialog
-    //   .open(CustomerCreateUpdateComponent, {
-    //     data: customer
+    //   .open(objectCreateUpdateComponent, {
+    //     data: object
     //   })
     //   .afterClosed()
-    //   .subscribe((updatedCustomer) => {
+    //   .subscribe((updatedobject) => {
     //     /**
-    //      * Customer is the updated customer (if the user pressed Save - otherwise it's null)
+    //      * object is the updated object (if the user pressed Save - otherwise it's null)
     //      */
-    //     if (updatedCustomer) {
+    //     if (updatedobject) {
     //       /**
     //        * Here we are updating our local array.
     //        * You would probably make an HTTP request here.
     //        */
-    //       const index = this.customers.findIndex(
-    //         (existingCustomer) => existingCustomer.id === updatedCustomer.id
+    //       const index = this.objects.findIndex(
+    //         (existingobject) => existingobject.id === updatedobject.id
     //       );
-    //       this.customers[index] = new Customer(updatedCustomer);
-    //       this.subject$.next(this.customers);
+    //       this.objects[index] = new object(updatedobject);
+    //       this.subject$.next(this.objects);
     //     }
     //   });
   }
 
-  deleteObject(customer: any) {
+  deleteObject(object: any) {
     // /**
     //  * Here we are updating our local array.
     //  * You would probably make an HTTP request here.
     //  */
-    // this.customers.splice(
-    //   this.customers.findIndex(
-    //     (existingCustomer) => existingCustomer.id === customer.id
+    // this.objects.splice(
+    //   this.objects.findIndex(
+    //     (existingobject) => existingobject.id === object.id
     //   ),
     //   1
     // );
-    // this.selection.deselect(customer);
-    // this.subject$.next(this.customers);
+    // this.selection.deselect(object);
+    // this.subject$.next(this.objects);
   }
 
   toggleColumnVisibility(
@@ -158,8 +170,8 @@ export class UiTableComponent implements OnInit, AfterViewInit {
   }
 
   onLabelChange(change: MatSelectChange, row: any) {
-    // const index = this.customers.findIndex((c) => c === row);
-    // this.customers[index].labels = change.value;
-    // this.subject$.next(this.customers);
+    // const index = this.objects.findIndex((c) => c === row);
+    // this.objects[index].labels = change.value;
+    // this.subject$.next(this.objects);
   }
 }

@@ -25,7 +25,6 @@ export class UiScrollbarComponent implements AfterContentInit, OnDestroy {
   constructor(private _element: ElementRef, private zone: NgZone) {}
 
   ngAfterContentInit() {
-    console.log(this.options);
     this.zone.runOutsideAngular(() => {
       this.scrollbarRef = new SimpleBar(
         this._element.nativeElement,

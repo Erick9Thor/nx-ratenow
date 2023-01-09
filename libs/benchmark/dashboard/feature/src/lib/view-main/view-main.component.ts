@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, of, ReplaySubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { MatTableDataSource } from '@angular/material/table';
 import { UntypedFormControl } from '@angular/forms';
-import { aioTableData, Customer } from '../interfaces/customer.model';
+import {
+  BenchMarkClient,
+  columnsBenchMarkClient,
+  tableBenchmarkClientData
+} from '../interfaces/customer.model';
 
 @Component({
   selector: 'nx-ratenow-view-main',
@@ -17,20 +20,20 @@ export class ViewMainComponent implements OnInit {
    * Simulating a service with HTTP that returns Observables
    * You probably want to remove this and do all requests in a service with HTTP
    */
-  subject$: ReplaySubject<Customer[]> = new ReplaySubject<Customer[]>(1);
-  data$: Observable<Customer[]> = this.subject$.asObservable();
-  dataSource!: MatTableDataSource<Customer>;
+  subject$: ReplaySubject<object[]> = new ReplaySubject<object[]>(1);
+  data$: Observable<object[]> = this.subject$.asObservable();
 
-  customers!: Customer[];
+  dataBinding!: object[];
+
+  columnsBenchMarkClient = columnsBenchMarkClient;
 
   ngOnInit() {
-    this.getData().subscribe((customers) => {
-      this.subject$.next(customers);
+    this.getData().subscribe((data) => {
+      this.subject$.next(data);
     });
 
-    this.data$.pipe(filter<Customer[]>(Boolean)).subscribe((customers) => {
-      this.customers = customers;
-      if (this.dataSource) this.dataSource.data = customers;
+    this.data$.pipe(filter<object[]>(Boolean)).subscribe((data) => {
+      this.dataBinding = data;
     });
   }
 
@@ -39,6 +42,10 @@ export class ViewMainComponent implements OnInit {
    * We are simulating this request here.
    */
   getData() {
-    return of(aioTableData.map((customer) => new Customer(customer)));
+    return of(
+      tableBenchmarkClientData.map(
+        (benchMarkClient) => new BenchMarkClient(benchMarkClient)
+      )
+    );
   }
 }
