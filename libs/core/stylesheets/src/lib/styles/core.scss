@@ -1,8 +1,6 @@
 @use '@angular/material' as mat;
 @import "@angular/material/theming";
 
-@include mat.core();
-
 // SCSS Vars
 @import "../variables/var";
 
@@ -12,13 +10,30 @@
 // Fonts
 @import "../fonts/inter";
 
-// Styles / CSS Variables
-@import "../styles/style-default";
-@import "../styles/style-dark";
-@import "../styles/style-light";
+// Themes
+@import "../themes/style-default";
+@import "../themes/style-dark";
+@import "../themes/style-light";
 
+@include mat.core();
 
-@include mat.all-component-themes($ratenow-theme);
+@include mat.all-component-colors($ratenow-theme-light);
+
+// Partials
+@import "../partials/horizontal";
+@import "../partials/misc";
+@import "../partials/print";
+@import "../partials/typography";
+@import "../partials/plugins/@angular/material/index";
+
+// Layouts
+@import "../partials/layouts/layout-apollo";
+@import "../partials/layouts/layout-ares";
+@import "../partials/layouts/layout-hermes";
+@import "../partials/layouts/layout-ikaros";
+@import "../partials/layouts/layout-poseidon";
+@import "../partials/layouts/layout-zeus";
+
 
 html {
   box-sizing: border-box;

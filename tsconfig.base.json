@@ -18,14 +18,67 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-ratenow/core/feature-toolbar": [
-        "libs/core/feature-toolbar/src/index.ts"
+      "@nx-ratenow/benchmark/dashboard/feature": [
+        "libs/benchmark/dashboard/feature/src/index.ts"
+      ],
+      "@nx-ratenow/core/animations": ["libs/core/animations/src/index.ts"],
+      "@nx-ratenow/core/assets": ["libs/core/assets/src/index.ts"],
+      "@nx-ratenow/core/config": ["libs/core/config/src/index.ts"],
+      "@nx-ratenow/core/config-panel": ["libs/core/config-panel/src/index.ts"],
+      "@nx-ratenow/core/data-access-layaout": [
+        "libs/core/data-access-layaout/src/index.ts"
+      ],
+      "@nx-ratenow/core/feature-page-layout": [
+        "libs/core/feature-page-layout/src/index.ts"
+      ],
+      "@nx-ratenow/core/feature-progress-bar-loader": [
+        "libs/core/feature-progress-bar-loader/src/index.ts"
+      ],
+      "@nx-ratenow/core/feature-user-menu": [
+        "libs/core/feature-user-menu/src/index.ts"
+      ],
+      "@nx-ratenow/core/layout/feature-footer": [
+        "libs/core/layout/feature-footer/src/index.ts"
+      ],
+      "@nx-ratenow/core/layout/feature-layout": [
+        "libs/core/layout/feature-layout/src/index.ts"
+      ],
+      "@nx-ratenow/core/layout/feature-navigation": [
+        "libs/core/layout/feature-navigation/src/index.ts"
+      ],
+      "@nx-ratenow/core/layout/feature-quickpanel": [
+        "libs/core/layout/feature-quickpanel/src/index.ts"
+      ],
+      "@nx-ratenow/core/layout/feature-sidenav": [
+        "libs/core/layout/feature-sidenav/src/index.ts"
+      ],
+      "@nx-ratenow/core/layout/feature-toolbar": [
+        "libs/core/layout/feature-toolbar/src/index.ts"
       ],
       "@nx-ratenow/core/material": ["libs/core/material/src/index.ts"],
+      "@nx-ratenow/core/pipes": ["libs/core/pipes/src/index.ts"],
       "@nx-ratenow/core/stylesheets": ["libs/core/stylesheets/src/index.ts"],
       "@nx-ratenow/shared/auth": ["libs/shared/auth/src/index.ts"],
       "@nx-ratenow/shared/feature-table": [
-        "libs/shared/feature-table/src/index.ts"
+        "libs/shared/feature-table/src/index.ts"],
+      "@nx-ratenow/core/utils": ["libs/core/utils/src/index.ts"],
+      "@nx-ratenow/shared/feature-breadcrumbs": [
+        "libs/shared/feature-breadcrumbs/src/index.ts"
+      ],
+      "@nx-ratenow/shared/feature-popover": [
+        "libs/shared/feature-popover/src/index.ts"
+      ],
+      "@nx-ratenow/shared/feature-scrollbar": [
+        "libs/shared/feature-scrollbar/src/index.ts"
+      ],
+      "@nx-ratenow/shared/feature-secondary-toolbar": [
+        "libs/shared/feature-secondary-toolbar/src/index.ts"
+      ],
+      "@nx-ratenow/shared/feature-sidebar": [
+        "libs/shared/feature-sidebar/src/index.ts"
+      ],
+      "@nx-ratenow/shared/modals/feature-search-modal": [
+        "libs/shared/modals/feature-search-modal/src/index.ts"
       ]
     }
   },

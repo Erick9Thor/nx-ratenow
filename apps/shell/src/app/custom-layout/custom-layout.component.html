@@ -1,0 +1,39 @@
+<ng-template #sidenavRef>
+  <nx-ratenow-ui-sidenav
+    [collapsed]="sidenavCollapsed$ | async"
+  ></nx-ratenow-ui-sidenav>
+</ng-template>
+
+<ng-template #toolbarRef>
+  <nx-ratenow-toolbar
+    [hasShadow]="toolbarShadowEnabled$ | async"
+    [mobileQuery]="(isDesktop$ | async) === false"
+    class="ratenow-toolbar"
+  ></nx-ratenow-toolbar>
+</ng-template>
+
+<ng-template #footerRef>
+  <nx-ratenow-footer
+    *ngIf="isFooterVisible$ | async"
+    class="ratenow-footer"
+  ></nx-ratenow-footer>
+</ng-template>
+
+<ng-template #quickpanelRef>
+  <nx-ratenow-ui-quickpanel></nx-ratenow-ui-quickpanel>
+</ng-template>
+
+<nx-ratenow-ui-layaout
+  [footerRef]="footerRef"
+  [quickpanelRef]="quickpanelRef"
+  [sidenavRef]="sidenavRef"
+  [toolbarRef]="toolbarRef"
+></nx-ratenow-ui-layaout>
+
+<nx-ratenow-config-panel-toggle
+  (openConfig)="configpanel.open()"
+></nx-ratenow-config-panel-toggle>
+
+<nx-ratenow-ui-sidebar #configpanel [invisibleBackdrop]="true" position="right">
+  <nx-ratenow-config-panel></nx-ratenow-config-panel>
+</nx-ratenow-ui-sidebar>

@@ -1,0 +1,26 @@
+{
+  "name": "core-animations",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/core/animations/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/core/animations",
+        "main": "libs/core/animations/src/index.ts",
+        "tsConfig": "libs/core/animations/tsconfig.lib.json",
+        "assets": ["libs/core/animations/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/core/animations/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

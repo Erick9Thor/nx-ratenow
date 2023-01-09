@@ -1,0 +1,13 @@
+<div class="flex items-center">
+  <nx-ratenow-ui-breadcrumb>
+    <a [routerLink]="['/']">
+      <mat-icon svgIcon="mat:home" class="icon-sm"></mat-icon>
+    </a>
+  </nx-ratenow-ui-breadcrumb>
+  <ng-container *ngFor="let crumb of crumbs; trackBy: trackByValue">
+    <div class="w-1 h-1 bg-gray rounded-full ltr:mr-2 rtl:ml-2"></div>
+    <nx-ratenow-ui-breadcrumb>
+      <a [routerLink]="[]">{{ crumb }}</a>
+    </nx-ratenow-ui-breadcrumb>
+  </ng-container>
+</div>
