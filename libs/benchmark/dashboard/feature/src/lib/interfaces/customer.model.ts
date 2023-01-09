@@ -1,11 +1,4 @@
 // TABLE
-export interface TableColumn<T> {
-  label: string;
-  property: string;
-  type: 'text' | 'image' | 'badge' | 'progress' | 'checkbox' | 'button';
-  visible?: boolean;
-  cssClasses?: string[];
-}
 
 export const aioTableLabels = [
   {
@@ -35,7 +28,7 @@ export const aioTableLabels = [
 ];
 
 // TODO: MOVE BENCHMARK TABLE
-interface BenchmarkClient {
+interface BenchmarkClientModel {
   id: number;
   name: string;
   userNumber: number;
@@ -47,7 +40,7 @@ export class BenchMarkClient {
   userNumber: number;
   registerDate: string;
 
-  constructor(benchmarkClient: BenchmarkClient) {
+  constructor(benchmarkClient: BenchmarkClientModel) {
     this.id = benchmarkClient.id;
     this.name = benchmarkClient.name;
     this.userNumber = benchmarkClient.userNumber;
@@ -55,7 +48,30 @@ export class BenchMarkClient {
   }
 }
 
-interface BenchmarkQuestionnaire {
+export const columnsBenchMarkClient: TableColumn<BenchMarkClient>[] = [
+  {
+    label: 'Id',
+    property: 'id',
+    type: 'text',
+    visible: true,
+    cssClasses: ['font-medium']
+  },
+  { label: 'Name', property: 'name', type: 'text', visible: true },
+  {
+    label: 'User Number',
+    property: 'userNumber',
+    type: 'text',
+    visible: true
+  },
+  {
+    label: 'Register Date',
+    property: 'Register Date',
+    type: 'text',
+    visible: true
+  }
+];
+
+interface BenchmarkQuestionnaireModel {
   id: number;
   name: string;
   preview: string;
@@ -71,7 +87,7 @@ export class BenchMarkQuestionnaire {
   section: string;
   subSection: string;
 
-  constructor(benchmarkQuestionnaire: BenchmarkQuestionnaire) {
+  constructor(benchmarkQuestionnaire: BenchmarkQuestionnaireModel) {
     this.id = benchmarkQuestionnaire.id;
     this.name = benchmarkQuestionnaire.name;
     this.preview = benchmarkQuestionnaire.preview;
@@ -80,6 +96,42 @@ export class BenchMarkQuestionnaire {
     this.subSection = benchmarkQuestionnaire.subSection;
   }
 }
+
+export const columnsBenchMarkQuestionnaire: TableColumn<BenchMarkQuestionnaire>[] =
+  [
+    {
+      label: 'Id',
+      property: 'id',
+      type: 'text',
+      visible: true,
+      cssClasses: ['font-medium']
+    },
+    { label: 'Name', property: 'name', type: 'text', visible: true },
+    {
+      label: 'Preview',
+      property: 'preview',
+      type: 'text',
+      visible: true
+    },
+    {
+      label: 'Language',
+      property: 'language',
+      type: 'text',
+      visible: true
+    },
+    {
+      label: 'Section',
+      property: 'section',
+      type: 'text',
+      visible: true
+    },
+    {
+      label: 'Sub Section',
+      property: 'subSection',
+      type: 'text',
+      visible: true
+    }
+  ];
 
 export const tableBenchmarkClientData = [
   {
