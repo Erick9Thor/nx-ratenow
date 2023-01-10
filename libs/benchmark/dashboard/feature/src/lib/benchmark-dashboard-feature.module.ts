@@ -8,9 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { MatSelectModule } from '@angular/material/select';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { RouterModule } from '@angular/router';
-import { SelectorBenchmarkComponent } from './selector-benchmark/selector-benchmark.component';
-import { SelectorQuestionnaireComponent } from './selector-questionnaire/selector-questionnaire.component';
-import { TabDataComponent } from './tab-data/tab-data.component';
 import { SharedFeatureTableModule } from '@nx-ratenow/shared/feature-table';
 import { CoreFeatureTabPageModule } from '@nx-ratenow/core/feature-tab-page';
 
@@ -33,38 +30,11 @@ import { CoreFeatureTabPageModule } from '@nx-ratenow/core/feature-tab-page';
       {
         path: '',
         pathMatch: 'full',
-        component: ViewMainComponent,
-        children: [
-          { path: '', redirectTo: 'benchmark-clients', pathMatch: 'full' },
-          {
-            path: 'benchmark-clients',
-            pathMatch: 'full',
-            component: SelectorBenchmarkComponent,
-            children: [
-              {
-                path: ':id',
-                pathMatch: 'full',
-                component: SelectorQuestionnaireComponent,
-                children: [
-                  {
-                    path: ':questionnaireId',
-                    pathMatch: 'full',
-                    component: TabDataComponent
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        component: ViewMainComponent
       }
     ])
   ],
-  declarations: [
-    ViewMainComponent,
-    SelectorBenchmarkComponent,
-    SelectorQuestionnaireComponent,
-    TabDataComponent
-  ],
+  declarations: [ViewMainComponent],
   exports: [ViewMainComponent]
 })
 export class BenchmarkDashboardFeatureModule {}
