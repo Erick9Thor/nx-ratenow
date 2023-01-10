@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { loadRemoteModule } from '@nrwl/angular/mf';
 import { CheckAppGuard } from '@nx-ratenow/core/guards';
+import { CoreI18nModule } from '@nx-ratenow/core/i18n';
 
 const routes: Routes = [
   // TODO: For now we only have one MF so we will redirect to Benchmark until we have more
@@ -47,11 +49,12 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    CoreI18nModule,
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled'
     })
   ],
-  exports: [RouterModule]
+  exports: [TranslateModule, RouterModule]
 })
 export class AppRoutingModule {}

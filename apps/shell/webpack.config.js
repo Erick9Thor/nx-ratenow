@@ -64,6 +64,11 @@ module.exports = withModuleFederation({
       strictVersion: false,
       requiredVersion: 'auto'
     }],
+    ['@ngx-translate/core', {
+      singleton: true,
+      strictVersion: false,
+      requiredVersion: 'auto'
+    }],
     ['luxon', {
       singleton: true,
       strictVersion: false,

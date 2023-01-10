@@ -26,6 +26,7 @@ import { checkRouterChildsData } from '@nx-ratenow/core/utils';
 import { UiSidebarComponent } from '@nx-ratenow/shared/feature-sidebar';
 import { Settings } from 'luxon';
 import { filter, map, startWith } from 'rxjs/operators';
+import { TranslateService } from '@ngx-translate/core';
 
 @UntilDestroy()
 @Component({
@@ -68,7 +69,8 @@ export class AppComponent implements OnInit {
     private readonly matIconRegistry: MatIconRegistry,
     private readonly domSanitizer: DomSanitizer,
     private breakpointObserver: BreakpointObserver,
-    private router: Router
+    private router: Router,
+    private translate: TranslateService
   ) {
     Settings.defaultLocale = this.localeId;
 
@@ -268,5 +270,10 @@ export class AppComponent implements OnInit {
       .subscribe((open) =>
         open ? this.configpanel.open() : this.configpanel.close()
       );
+
+    this.document.documentElement.lang = this.translate.currentLang;
+    this.translate.onLangChange.subscribe(
+      (lang) => (this.document.documentElement.lang = lang.lang)
+    );
   }
 }
