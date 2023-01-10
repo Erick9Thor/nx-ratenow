@@ -24,9 +24,6 @@
       "@nx-ratenow/benchmark/dashboard/feature": [
         "libs/benchmark/dashboard/feature/src/index.ts"
       ],
-      "@nx-ratenow/benchmark/dashboard/ui": [
-        "libs/benchmark/dashboard/ui/src/index.ts"
-      ],
       "@nx-ratenow/benchmark/dashboard/utils": [
         "libs/benchmark/dashboard/utils/src/index.ts"
       ],

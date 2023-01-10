@@ -7,16 +7,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { MatTooltipModule } from '@angular/material/tooltip';
 // import { MatSelectModule } from '@angular/material/select';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { SharedFeatureTableModule } from '@nx-ratenow/shared/feature-table';
 import { RouterModule } from '@angular/router';
+import { SelectorBenchmarkComponent } from './selector-benchmark/selector-benchmark.component';
+import { SelectorQuestionnaireComponent } from './selector-questionnaire/selector-questionnaire.component';
+import { TabDataComponent } from './tab-data/tab-data.component';
+import { SharedFeatureTableModule } from '@nx-ratenow/shared/feature-table';
+import { CoreFeatureTabPageModule } from '@nx-ratenow/core/feature-tab-page';
 
 @NgModule({
   imports: [
     CommonModule,
     CoreFeaturePageLayoutModule,
     SharedFeatureBreadcrumbsModule,
-
     SharedFeatureTableModule,
+    CoreFeatureTabPageModule,
 
     // TODO: This is a modal for add should stay on modals
     FormsModule,
@@ -26,10 +30,41 @@ import { RouterModule } from '@angular/router';
     MatButtonToggleModule,
 
     RouterModule.forChild([
-      { path: '', pathMatch: 'full', component: ViewMainComponent }
+      {
+        path: '',
+        pathMatch: 'full',
+        component: ViewMainComponent,
+        children: [
+          { path: '', redirectTo: 'benchmark-clients', pathMatch: 'full' },
+          {
+            path: 'benchmark-clients',
+            pathMatch: 'full',
+            component: SelectorBenchmarkComponent,
+            children: [
+              {
+                path: ':id',
+                pathMatch: 'full',
+                component: SelectorQuestionnaireComponent,
+                children: [
+                  {
+                    path: ':questionnaireId',
+                    pathMatch: 'full',
+                    component: TabDataComponent
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     ])
   ],
-  declarations: [ViewMainComponent],
+  declarations: [
+    ViewMainComponent,
+    SelectorBenchmarkComponent,
+    SelectorQuestionnaireComponent,
+    TabDataComponent
+  ],
   exports: [ViewMainComponent]
 })
 export class BenchmarkDashboardFeatureModule {}

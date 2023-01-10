@@ -18,6 +18,7 @@ import { RouterModule } from '@angular/router';
     MatTooltipModule,
     RouterModule
   ],
-  declarations: [UiPageTabComponent]
+  declarations: [UiPageTabComponent],
+  exports: [UiPageTabComponent]
 })
 export class CoreFeatureTabPageModule {}

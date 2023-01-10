@@ -13,16 +13,6 @@
           [crumbs]="['Dashboard', 'Benchmark']"
         ></nx-ratenow-ui-breadcrumbs>
       </div>
-
-      <div class="hidden sm:block">
-        <mat-button-toggle-group
-          [formControl]="layoutCtrl"
-          class="mt-4 sm:mt-0"
-        >
-          <mat-button-toggle value="boxed">Boxed</mat-button-toggle>
-          <mat-button-toggle value="fullwidth">Full-Width</mat-button-toggle>
-        </mat-button-toggle-group>
-      </div>
     </div>
   </ratenow-page-layout-header>
 
@@ -31,17 +21,6 @@
     [class.px-gutter]="layoutCtrl.value === 'fullwidth'"
     class="-mt-6"
   >
-
-  <!-- TABLE DATA -->
-
-  <nx-ratenow-ui-table
-    [columns]="columnsBenchMarkClient"
-    [data]="dataBinding"
-    [addable]="addable"
-  ></nx-ratenow-ui-table>
-
-
+    <router-outlet></router-outlet>
   </ratenow-page-layout-content>
 </nx-ratenow-ui-page-layout>
-
-
