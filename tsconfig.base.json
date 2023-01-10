@@ -40,6 +40,7 @@
       "@nx-ratenow/core/feature-user-menu": [
         "libs/core/feature-user-menu/src/index.ts"
       ],
+      "@nx-ratenow/core/guards": ["libs/core/guards/src/index.ts"],
       "@nx-ratenow/core/layout/feature-footer": [
         "libs/core/layout/feature-footer/src/index.ts"
       ],

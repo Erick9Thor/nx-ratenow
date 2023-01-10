@@ -1,10 +1,11 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Platform } from '@angular/cdk/platform';
 import { DOCUMENT } from '@angular/common';
 import {
-  AfterViewInit,
   Component,
   Inject,
   LOCALE_ID,
+  OnInit,
   Renderer2,
   ViewChild
 } from '@angular/core';
@@ -13,21 +14,47 @@ import {
   SafeResourceUrlWithIconOptions
 } from '@angular/material/icon';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { ConfigService } from '@nx-ratenow/core/config';
 import {
   LayoutService,
   NavigationService,
   SplashScreenService
 } from '@nx-ratenow/core/data-access-layaout';
+import { checkRouterChildsData } from '@nx-ratenow/core/utils';
+import { UiSidebarComponent } from '@nx-ratenow/shared/feature-sidebar';
 import { Settings } from 'luxon';
+import { filter, map, startWith } from 'rxjs/operators';
 
+@UntilDestroy()
 @Component({
   selector: 'nx-ratenow-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  sidenavCollapsed$ = this.layoutService.sidenavCollapsed$;
+
+  isFooterVisible$ = this.configService.config$.pipe(
+    map((config) => config.footer.visible)
+  );
+
+  isDesktop$ = this.layoutService.isDesktop$;
+
+  toolbarShadowEnabled$ = this.router.events.pipe(
+    filter((event) => event instanceof NavigationEnd),
+    startWith(null),
+    map(() =>
+      checkRouterChildsData(
+        this.router.routerState.root.snapshot,
+        (data) => data.toolbarShadowEnabled
+      )
+    )
+  );
+
+  @ViewChild('configpanel', { static: true }) configpanel: UiSidebarComponent;
+
   constructor(
     private configService: ConfigService,
     private renderer: Renderer2,
@@ -39,7 +66,9 @@ export class AppComponent {
     private navigationService: NavigationService,
     private splashScreenService: SplashScreenService,
     private readonly matIconRegistry: MatIconRegistry,
-    private readonly domSanitizer: DomSanitizer
+    private readonly domSanitizer: DomSanitizer,
+    private breakpointObserver: BreakpointObserver,
+    private router: Router
   ) {
     Settings.defaultLocale = this.localeId;
 
@@ -231,5 +260,13 @@ export class AppComponent {
         icon: 'mat:settings'
       }
     ];
+  }
+
+  ngOnInit(): void {
+    this.layoutService.configpanelOpen$
+      .pipe(untilDestroyed(this))
+      .subscribe((open) =>
+        open ? this.configpanel.open() : this.configpanel.close()
+      );
   }
 }

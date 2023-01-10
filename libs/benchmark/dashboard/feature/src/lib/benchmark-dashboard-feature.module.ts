@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { MatSelectModule } from '@angular/material/select';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { SharedFeatureTableModule } from '@nx-ratenow/shared/feature-table';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -22,7 +23,11 @@ import { SharedFeatureTableModule } from '@nx-ratenow/shared/feature-table';
     // MatTooltipModule,
     ReactiveFormsModule,
     // MatSelectModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+
+    RouterModule.forChild([
+      { path: '', pathMatch: 'full', component: ViewMainComponent }
+    ])
   ],
   declarations: [ViewMainComponent],
   exports: [ViewMainComponent]
