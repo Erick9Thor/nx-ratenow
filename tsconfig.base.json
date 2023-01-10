@@ -18,8 +18,17 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-ratenow/benchmark/dashboard/data-access": [
+        "libs/benchmark/dashboard/data-access/src/index.ts"
+      ],
       "@nx-ratenow/benchmark/dashboard/feature": [
         "libs/benchmark/dashboard/feature/src/index.ts"
+      ],
+      "@nx-ratenow/benchmark/dashboard/ui": [
+        "libs/benchmark/dashboard/ui/src/index.ts"
+      ],
+      "@nx-ratenow/benchmark/dashboard/utils": [
+        "libs/benchmark/dashboard/utils/src/index.ts"
       ],
       "@nx-ratenow/core/animations": ["libs/core/animations/src/index.ts"],
       "@nx-ratenow/core/assets": ["libs/core/assets/src/index.ts"],
