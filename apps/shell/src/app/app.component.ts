@@ -139,51 +139,51 @@ export class AppComponent implements OnInit {
           }
         ]
       },
-      {
-        type: 'subheading',
-        label: 'Apps',
-        children: [
-          {
-            type: 'link',
-            label: 'Calendar',
-            route: '/apps/calendar',
-            icon: 'mat:date_range',
-            badge: {
-              value: '12',
-              bgClass: 'bg-deep-purple',
-              textClass: 'text-deep-purple-contrast'
-            }
-          },
-          {
-            type: 'link',
-            label: 'Mailbox',
-            route: '/apps/mail',
-            icon: 'mat:mail'
-          },
-          {
-            type: 'link',
-            label: 'Contacts',
-            route: '/apps/contacts',
-            icon: 'mat:contacts'
-          },
-          {
-            type: 'link',
-            label: 'Scrumboard',
-            route: '/apps/scrumboard',
-            icon: 'mat:assessment'
-            // badge: {
-            //   value: 'NEW',
-            //   bgClass: 'bg-primary',
-            //   textClass: 'text-primary-contrast'
-            // }
-          }
-        ]
-      },
-      {
-        type: 'subheading',
-        label: 'Clients',
-        children: []
-      },
+      // {
+      //   type: 'subheading',
+      //   label: 'Apps',
+      //   children: [
+      //     {
+      //       type: 'link',
+      //       label: 'Calendar',
+      //       route: '/apps/calendar',
+      //       icon: 'mat:date_range',
+      //       badge: {
+      //         value: '12',
+      //         bgClass: 'bg-deep-purple',
+      //         textClass: 'text-deep-purple-contrast'
+      //       }
+      //     },
+      //     {
+      //       type: 'link',
+      //       label: 'Mailbox',
+      //       route: '/apps/mail',
+      //       icon: 'mat:mail'
+      //     },
+      //     {
+      //       type: 'link',
+      //       label: 'Contacts',
+      //       route: '/apps/contacts',
+      //       icon: 'mat:contacts'
+      //     },
+      //     {
+      //       type: 'link',
+      //       label: 'Scrumboard',
+      //       route: '/apps/scrumboard',
+      //       icon: 'mat:assessment'
+      //       // badge: {
+      //       //   value: 'NEW',
+      //       //   bgClass: 'bg-primary',
+      //       //   textClass: 'text-primary-contrast'
+      //       // }
+      //     }
+      //   ]
+      // },
+      // {
+      //   type: 'subheading',
+      //   label: 'Clients',
+      //   children: []
+      // },
       {
         type: 'subheading',
         label: 'System status',

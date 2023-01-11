@@ -18,18 +18,17 @@
       <button
         (click)="toggleCollapse()"
         *ngIf="showCollapsePin$ | async"
-        class="w-8 h-8 -mr-2 leading-none flex-none hidden lg:block"
+        style="display: contents;"
+        class="w-8 h-8 -mr-2 leading-none flex-none hidden"
         mat-icon-button
         type="button"
       >
         <mat-icon
           *ngIf="!collapsed"
-          class="text-[0.875rem] w-[0.875rem] h-[0.875rem]"
           svgIcon="mat:radio_button_checked"
         ></mat-icon>
         <mat-icon
           *ngIf="collapsed"
-          class="text-[0.875rem] w-[0.875rem] h-[0.875rem]"
           svgIcon="mat:radio_button_unchecked"
         ></mat-icon>
       </button>
