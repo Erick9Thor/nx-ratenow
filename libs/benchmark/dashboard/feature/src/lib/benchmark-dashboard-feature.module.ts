@@ -10,6 +10,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { RouterModule } from '@angular/router';
 import { SharedFeatureTableModule } from '@nx-ratenow/shared/feature-table';
 import { CoreFeatureTabPageModule } from '@nx-ratenow/core/feature-tab-page';
+import { SelectorBenchmarkComponent } from './selector-benchmark/selector-benchmark.component';
+import { SelectorQuestionnaireComponent } from './selector-questionnaire/selector-questionnaire.component';
+import { TabDataComponent } from './tab-data/tab-data.component';
 
 @NgModule({
   imports: [
@@ -29,12 +32,33 @@ import { CoreFeatureTabPageModule } from '@nx-ratenow/core/feature-tab-page';
     RouterModule.forChild([
       {
         path: '',
+        component: ViewMainComponent,
+        children: [
+          { path: '', redirectTo: 'benchmark-clients', pathMatch: 'full' },
+          {
+            path: 'benchmark-clients',
+            pathMatch: 'full',
+            component: SelectorBenchmarkComponent
+          },
+          {
+            path: 'benchmark-clients/:id',
+            pathMatch: 'full',
+            component: SelectorQuestionnaireComponent
+          }
+        ]
+      },
+      {
+        path: 'benchmark-clients/:id/:questionnaireId',
         pathMatch: 'full',
-        component: ViewMainComponent
+        component: TabDataComponent
       }
     ])
   ],
-  declarations: [ViewMainComponent],
-  exports: [ViewMainComponent]
+  declarations: [
+    ViewMainComponent,
+    SelectorBenchmarkComponent,
+    SelectorQuestionnaireComponent,
+    TabDataComponent
+  ]
 })
 export class BenchmarkDashboardFeatureModule {}

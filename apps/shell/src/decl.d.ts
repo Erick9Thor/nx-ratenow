@@ -1,1 +1,2 @@
 declare module 'benchmark/Module';
+

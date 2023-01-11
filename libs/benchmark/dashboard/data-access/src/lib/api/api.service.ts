@@ -4,7 +4,7 @@ import { Observable, of, ReplaySubject } from 'rxjs';
 import {
   BenchMarkClient,
   tableBenchmarkClientData
-} from '@nx-ratenow/benchmark/dashboard/feature';
+} from '../interfaces/customer.model';
 
 @Injectable({
   providedIn: 'root'

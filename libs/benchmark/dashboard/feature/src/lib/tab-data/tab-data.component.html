@@ -1,0 +1,29 @@
+
+<nx-ratenow-ui-page-layout>
+  <ratenow-page-layout-header
+    class="pb-16 flex flex-col items-start justify-center"
+  >
+    <div
+      [class.px-gutter]="'fullwidth'"
+      class="w-full flex flex-col sm:flex-row justify-between"
+    >
+      <div>
+        <h1 class="title mt-0 mb-1">Benchmark</h1>
+        <nx-ratenow-ui-breadcrumbs
+          [crumbs]="['Dashboard', 'Benchmark', 'Questionnaire', 'ID Benchmark']"
+        ></nx-ratenow-ui-breadcrumbs>
+      </div>
+    </div>
+  </ratenow-page-layout-header>
+
+  <ratenow-page-layout-content
+    [class.px-gutter]="'fullwidth'"
+    class="-mt-6"
+  >
+  </ratenow-page-layout-content>
+
+
+  <nx-ratenow-ui-page-tab></nx-ratenow-ui-page-tab>
+
+
+</nx-ratenow-ui-page-layout>

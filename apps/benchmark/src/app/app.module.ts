@@ -8,7 +8,18 @@ import { RemoteEntryModule } from './remote-entry/entry.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' })
+    RouterModule.forRoot(
+      [
+        {
+          path: '',
+          loadChildren: () =>
+            import('./remote-entry/entry.module').then(
+              (m) => m.RemoteEntryModule
+            )
+        }
+      ],
+      { initialNavigation: 'enabledBlocking' }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

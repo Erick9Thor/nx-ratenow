@@ -2,5 +2,5 @@
 
 module.exports = {
   name: 'shell',
-  remotes: [],
+  remotes: ['benchmark'],
 };

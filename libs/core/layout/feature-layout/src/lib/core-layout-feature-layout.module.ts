@@ -4,17 +4,13 @@ import { UiLayaoutComponent } from './ui-layaout/ui-layaout.component';
 import { RouterModule } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { CoreFeatureProgressBarLoaderModule } from '@nx-ratenow/core/feature-progress-bar-loader';
-import { BenchmarkDashboardFeatureModule } from '@nx-ratenow/benchmark/dashboard/feature';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     MatSidenavModule,
-    CoreFeatureProgressBarLoaderModule,
-
-    // TODO:  delete, test proposes
-    BenchmarkDashboardFeatureModule
+    CoreFeatureProgressBarLoaderModule
   ],
   declarations: [UiLayaoutComponent],
   exports: [UiLayaoutComponent]
