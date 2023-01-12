@@ -7,12 +7,39 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { MatTooltipModule } from '@angular/material/tooltip';
 // import { MatSelectModule } from '@angular/material/select';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { SharedFeatureTableModule } from '@nx-ratenow/shared/feature-table';
 import { CoreFeatureTabPageModule } from '@nx-ratenow/core/feature-tab-page';
 import { SelectorBenchmarkComponent } from './selector-benchmark/selector-benchmark.component';
 import { SelectorQuestionnaireComponent } from './selector-questionnaire/selector-questionnaire.component';
 import { TabDataComponent } from './tab-data/tab-data.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: ViewMainComponent,
+    children: [
+      { path: '', redirectTo: 'benchmark-clients', pathMatch: 'full' },
+      {
+        path: 'benchmark-clients',
+        pathMatch: 'full',
+        component: SelectorBenchmarkComponent,
+        children: [
+          {
+            path: ':id',
+            pathMatch: 'full',
+            component: SelectorQuestionnaireComponent
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: 'benchmark-clients/:id/:questionnaireId',
+    pathMatch: 'full',
+    component: TabDataComponent
+  }
+];
 
 @NgModule({
   imports: [
@@ -29,30 +56,7 @@ import { TabDataComponent } from './tab-data/tab-data.component';
     // MatSelectModule,
     MatButtonToggleModule,
 
-    RouterModule.forChild([
-      {
-        path: '',
-        component: ViewMainComponent,
-        children: [
-          { path: '', redirectTo: 'benchmark-clients', pathMatch: 'full' },
-          {
-            path: 'benchmark-clients',
-            pathMatch: 'full',
-            component: SelectorBenchmarkComponent
-          },
-          {
-            path: 'benchmark-clients/:id',
-            pathMatch: 'full',
-            component: SelectorQuestionnaireComponent
-          }
-        ]
-      },
-      {
-        path: 'benchmark-clients/:id/:questionnaireId',
-        pathMatch: 'full',
-        component: TabDataComponent
-      }
-    ])
+    RouterModule.forChild(routes)
   ],
   declarations: [
     ViewMainComponent,
